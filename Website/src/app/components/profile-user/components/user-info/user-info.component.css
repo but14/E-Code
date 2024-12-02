@@ -1,0 +1,167 @@
+.userInfo{
+    padding: 20px;
+    display: grid;
+    padding-left: 40px;
+}
+.userInfo .title{
+    padding-bottom: 20px;
+    border-bottom: .5px solid #efefef;
+}
+.userInfo .title h2{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    color: black;
+    margin: 0;
+}
+.userInfo .title span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+}
+.userInfo .formEditInfo{
+    /* display: grid; */
+    align-items: center;
+    justify-content: left;
+    /* width: 100%; */
+}
+.userInfo .formEditInfo form{
+    display: grid;
+    align-items: center;
+    /* width: 50%; */
+    /* width: 100%; */
+}
+.userInfo .formEditInfo form .inputWrapper{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.userInfo .formEditInfo form span{
+    display: block;
+    justify-content: right;
+    width: 40%;
+    color: rgba(85,85,85,.8);
+}
+.userInfo .formEditInfo form input{
+    display: block;
+    justify-content: left;
+    width: 60%;
+    padding: 10px;
+    border: .5px solid#efefef;
+    border-radius: 4px;
+    color: black;
+}
+.userInfo .formEditInfo form .btnSave{
+
+}
+.userInfo .formEditInfo form .genderChoice{
+    display: flex;
+    width: 60%;
+}
+.userInfo .formEditInfo form .genderChoice span{
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+.userInfo .formEditInfo form .genderChoice input{
+    cursor: pointer;
+}
+.userInfo .formEditInfo form .genderChoice .male{
+    padding: 0px 10px;
+    color: black;
+    display: flex;    
+}
+.userInfo .formEditInfo form .genderChoice .female{
+    padding: 0px 10px;
+    color: black;
+    display: flex;    
+}
+.userInfo .formEditInfo form .genderChoice .other{
+    padding: 0px 10px;
+    color: black;
+    display: flex;    
+}
+.userInfo .formEditInfo form .avatar{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.userInfo .formEditInfo form .avatar img{
+    width: 130px;
+    height: 130px;
+    border: .5px solid #efefef;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px;
+}
+.userInfo .formEditInfo form .avatar .btnChooseImage{
+    border: none;
+    background-color: transparent;
+    /* padding: 5px;   */
+    /* cursor: pointer; */
+    border-radius: 4px;
+    transition: all .2s;
+    color: black;
+}
+.userInfo .formEditInfo form .avatar .btnChooseImage:hover{
+    /* background-color: #efefef; */
+}
+.userInfo .formEditInfo form .btnSave{
+    border: .5px solid dimgray;
+    background-color: transparent;
+    padding: 15px 5px;  
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .2s;
+    margin: 20px 0px;
+}
+.userInfo .formEditInfo form .btnSave:hover{
+    background-color: #efefef;
+}
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .userInfo{
+        padding: 10px;
+        padding-top: 20px;
+        display: grid;
+        /* padding-left: 40px; */
+    }
+    .userInfo .formEditInfo form .avatar{
+        display: grid;
+        align-items: center;
+        padding: 20px;
+    }
+    .userInfo .formEditInfo form .avatar img{
+        margin: 15px auto;
+    }
+    .userInfo .formEditInfo form .avatar .btnChooseImage{
+        border: none;
+        background-color: transparent;
+        /* padding: 5px;   */
+        /* cursor: pointer; */
+        border-radius: 4px;
+        transition: all .2s;
+        margin: 0px auto;
+    }
+}

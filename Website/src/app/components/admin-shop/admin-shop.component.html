@@ -1,0 +1,35 @@
+<!-- Wrapper -->
+<div id="wrapperID" class="grid wide wrapper">
+    <div class="row adminShopContainer">
+        <!-- Menu -->
+        <div class="col l-2 m-2 c-6 leftNavBarContainer">
+            <div class="leftNavBar">
+                <div class="logo" routerLink="">
+                    <img src="resource/img/logo-no-background.png" alt="">
+                </div>
+                <div class="navBtnContainer">
+                    <!-- Quản lý -->
+                    <span>QUẢN LÝ</span>
+                   
+                    <button class="btnDashboard" routerLink="dashboard"><img src="resource/img/dashboard_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">Đánh giá về cửa hàng </button>
+                    <button class="btnProductManage" routerLink="product-management"><img src="resource/img/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt=""> Sản Phẩm</button>
+                    <button class="btnCategoryManage" routerLink="category-management"><img src="resource/img/category_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt=""> Loại Sản Phẩm</button>
+                    <button class="btnOrderManage" routerLink="order-management"><img src="resource/img/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt=""> Đơn Hàng</button>
+                    <!-- Tài khoản -->
+                    <span>TÀI KHOẢN</span>
+                    <button type="button" (click)="logout()" class="btnLogoutAdmin"><img src="resource/img/logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt=""> Logout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="col l-10 m-10 c-12 mainContent">
+            <!-- Phần tìm kiếm -->
+            <div class="searchBox">
+                <img src="resource/img/logo-no-background.png" alt="">
+                <input type="text" placeholder="Tìm kiếm..." name="" id="" value="">
+                <button class="btnExtendMenu"><img src="resource/img/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).png" alt=""></button>
+            </div>      
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

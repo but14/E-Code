@@ -1,0 +1,62 @@
+<div class="row cartContainer">
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 cart">
+        <!-- Thanh head của danh sách item giỏ hàng -->
+        <div class="topCart">
+            <span class="colProduct">Sản Phẩm</span>
+            <span class="colPrice">Đơn Giá</span>
+            <span class="colQuantity">Số Lượng</span>
+            <span class="colAmount">Số Tiền</span>
+            <span class="colOperation">Thao Tác</span>
+        </div>
+        <!-- Danh sách item giỏ hàng -->
+        <div class="listItemInCart" >
+            <!-- Item -->
+            <div *ngIf="product_cart && product_cart.length > 0 else  cart_null">
+                <div class="itemInCart" *ngFor="let product of product_cart; let i = index">
+                    <div class="top">
+                        <div class="leftTop">
+                            <span>{{ product.product.userID.user_name }}</span>
+                            <button class="btnWatchShop" routerLink="/shop-page/{{product.product.userID.user_name}}"
+                             [queryParams]="{
+                                idSeller : product.product.userID._id,
+                                category_id : '' ,
+                                page : 1,
+                                sortBy : ''
+                              }">
+                            <i class="fa-solid fa-store"></i> Xem Shop</button>
+                        </div>
+                    </div>
+                    <div class="mid">
+                        <div class="productInfo">
+                            <img routerLink="/product-detail/{{product.product.product_slug}}" [queryParams]="{ idProduct : product.product._id }" [src]="baseUrl + product.product.product_variants[0].variant_imgs[0].link" alt="">
+                            <span routerLink="/product-detail/{{product.product.product_slug}}" [queryParams]="{ idProduct : product.product._id }">{{ product.product.product_name }} Phân loại : {{product.product.product_variants[0].variant_name}}</span>
+                            <div class="productPrice">
+                                <span>Sản phẩm {{ i }}</span>
+                            </div>
+                        </div>
+                        <div class="productPrice">
+                            <span>{{ product.product.product_variants[0].price | number : '1.0-0'}} </span>
+                        </div>
+                        <div class="productQuantity">
+                            <input type="number"  [value]="product.quantity" (change)="change_quality(input,product.product._id,product.product.product_variants[0]._id)" #input> <!-- Sử dụng property binding để thiết lập value --> </div>
+                        <div class="productAmount">
+                            <span>{{ product.product.product_variants[0].price * product.quantity | number : '1.0-0' }} vnđ</span>
+                        </div>
+                        <div class="operation">
+                            <button type="button" (click)="remove_cart(product.product._id,product.variant_id)" class="btnRemoveItem">Xóa</button>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Miễn phí vận chuyển</span>
+                    </div>
+                </div> 
+            </div>
+            <ng-template #cart_null>Không có sản phẩm nào trong giỏ hàng...</ng-template>
+        <!-- Thanh đặt hàng -->
+        <div class="bottomCart">
+            <span>Tổng thanh toán: <span style="color: #a61713; font-size: 22px; font-weight: 400;">{{total_in_cart | number : '1.0-0'}} vnđ</span></span>
+            <button type="button" routerLink="/checkout" class="btnOrder">Mua Hàng</button>
+            <!-- <a routerLink="/checkout">Proceed to Checkout</a> -->
+        </div>
+    </div>
+</div>

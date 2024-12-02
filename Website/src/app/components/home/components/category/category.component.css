@@ -1,0 +1,106 @@
+/* CSS Category */
+.category{
+    margin: 0;
+    margin-top: 20px;
+}
+.category .col{
+    background-color: white;
+    border-radius: 4px;
+    padding: 0;
+}
+.category .titleCategory{
+    padding: 20px;
+    border-bottom: .5px solid rgb(237, 237, 237);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.category .titleCategory span{
+    font-size: 17px;
+    color: black;
+    font-weight: 300;
+}
+.category .titleCategory .btnMoveCategoryContainer{
+    
+}
+.category .titleCategory .btnMoveCategoryContainer button{
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: black;
+    background-color: #0000001c;
+    cursor: pointer;
+    margin: 2px;
+}
+.category .titleCategory .btnMoveCategoryContainer button:hover{
+    background-color: #3d3d3d1c;
+}
+.category .listCategory{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 5px;
+    scroll-snap-type: x;
+    scroll-behavior: smooth;
+}
+.category .listCategory .btnCategory{
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    color: black;
+}
+.category .listCategory .btnCategory:hover{
+    background-color: #0000001c;
+    border-radius: 5px;
+}
+.category .listCategory .btnCategory img{
+    width: 100%;
+}
+.category .listCategory .btnCategory span{
+    font-size: 14px;
+}
+/* Hết CSS Category */
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .category{
+        margin: 0;
+        margin-top: 0px;
+    }
+    .category .col{
+        background-color: white;
+        border-radius: 0px;
+        padding: 0;
+    }
+}

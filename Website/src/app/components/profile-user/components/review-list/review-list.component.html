@@ -1,0 +1,109 @@
+<div class="orderHistory">
+    <div class="titleOrderHistory">
+        <h2>Lịch sử đơn hàng</h2>
+    </div>
+    <div class="listOrder">
+        <!-- Item -->
+        <ng-container *ngIf="list_order.length > 0 else elseBlock">
+            <div class="orderHistoryInfo" *ngFor="let order of list_order">
+                <div class="top">
+                    <div class="leftTop">
+                        <span> Mã Đơn Hàng  :</span>
+                        <span>{{order._id}}</span>
+                    </div>
+                </div>
+                <div class="top"><b>Theo dõi đơn hàng :</b></div>
+                <div class="timeline" *ngIf="order.order_status == 'Ordered' ">
+                    <div class="timeline-item" >
+                        Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+                    </div>
+                    <div class="timeline-item gray" >
+                        Đơn hàng đã được chuyển đi 
+                    </div>
+                    <div class="timeline-item gray">
+                        Đơn hàng đang được giao và chờ đánh giá 
+                    </div>
+                    <div class="timeline-item gray">
+                        Thành công <i>(Cập nhập: {{format_date(order.updatedAt)}})</i>
+                    </div>
+                </div>
+                <div class="timeline" *ngIf="order.order_status == 'Shipping' ">
+                    <div class="timeline-item" >
+                        Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+                    </div>
+                    <div class="timeline-item" >
+                        Đơn hàng đã được chuyển đi 
+                    </div>
+                    <div class="timeline-item gray">
+                        Đơn hàng đang được giao và chờ đánh giá
+                    </div>
+                    <div class="timeline-item gray">
+                        Thành công <i>(Cập nhập: {{format_date(order.updatedAt)}})</i>
+                    </div>
+                </div>
+                <div class="timeline" *ngIf="order.order_status == 'Processing' ">
+                    <div class="timeline-item" >
+                        Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+                    </div>
+                    <div class="timeline-item" >
+                        Đơn hàng đã được chuyển đi 
+                    </div>
+                    <div class="timeline-item">
+                        Đơn hàng đang được giao và chờ đánh giá <i>(Cập nhập: {{format_date(order.updatedAt)}})</i>
+                    </div>
+                    <div class="timeline-item gray">
+                        Thành công <i>(Cập nhập: {{format_date(order.updatedAt)}})</i>
+                    </div>
+                </div>
+                <div class="timeline" *ngIf="order.order_status == 'Successfull' ">
+                    <div class="timeline-item" >
+                        Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+                    </div>
+                    <div class="timeline-item" >
+                        Đơn hàng đã được chuyển đi 
+                    </div>
+                    <div class="timeline-item">
+                        Đơn hàng đang được giao và chờ đánh giá 
+                    </div>
+                    <div class="timeline-item">
+                        Thành công <i>(Cập nhập: {{format_date(order.updatedAt)}})</i>
+                    </div>
+                </div>
+                
+                <!-- Từng order trong đơn mua -->
+
+                <div class="container">
+                    <div class="product-header"> Danh Sách sản phẩm</div>
+                    <ng-container *ngFor="let detail of order.order_details">
+                        <div class="product-item">
+                            <img routerLink="/product-detail/{{detail.product_id}}"
+                            [queryParams]="{ idProduct : detail.product_id }"  alt="Image of a flower bouquet" height="60" [src]="productDetails[detail.product_id].product_variants[0].variant_imgs[0].alt" width="60"/>
+                            <div class="product-details">
+                                <p><b>{{productDetails[detail.product_id].product_name}}</b></p>
+                                <p>Loại: {{productDetails[detail.product_id].product_variants[0].variant_name}} </p>
+                            </div>
+                            <div class="product-price">
+                                ₫ {{detail.unit_price | number : '1.0-0'}}
+                            </div>
+                            <div class="product-quantity">
+                                Số lượng : {{detail.quantity }}
+                            </div>
+                            <div class="product-total">
+                              ₫{{detail.unit_price * detail.quantity | number : '1.0-0'}}
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="total-amount" style="color: #a61713; font-size: 22px; font-weight: 400;">
+                     Tổng số tiền ({{order.order_details.length}} sản phẩm): {{ order.order_payment_cost | number : '1.0-0'}} đ
+                    </div>
+                </div>
+                <div class="bottom">
+                    <button class="btnRePurchase" disabled>Mua Lại</button>
+                </div>
+                
+            </div>
+        </ng-container>
+        <ng-template #elseBlock>Không có sản phẩm nào cần đánh giá.....</ng-template>
+
+    </div>
+</div>

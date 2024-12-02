@@ -1,0 +1,137 @@
+.reviewContainer{
+    margin: 0;
+}
+.reviewContainer .review{
+    padding: 10px;
+    /* margin-top: 15px; */
+    background-color: white;
+    border-radius: 0px 0px 4px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+    border: .5px solid #efefef;
+    border-top: none;
+}
+.reviewContainer .review .top{
+    padding: 10px;
+    border-bottom: .5px solid #efefef;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reviewContainer .review .top span{
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+.reviewContainer .review .top .btnCloseReview{
+    border: .5px solid #a61713;
+    background-color: white;
+    color: #a61713;
+    transition: all .2s;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+.reviewContainer .review .top .btnCloseReview:hover{
+    background-color: #a61713;
+    color: white;
+}
+.reviewContainer .review .middle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.reviewContainer .review .middle .starRatingOfProduct{
+    padding: 10px;
+    text-align: center;
+}
+.reviewContainer .review .middle .starRatingOfProduct span{
+    cursor: pointer;
+    font-size: 20px;
+}
+.reviewContainer .review .middle .starRatingOfProduct span:hover{    
+    color: #a61813a4;
+}
+.reviewContainer .review .middle .checked{
+    color: #a61713;
+}
+.reviewContainer .review .middle .chooseImages{
+    padding: 10px;
+    text-align: center;
+}
+.reviewContainer .review .middle .chooseImages input{
+    margin: 0 auto;
+    border-radius: 4px;
+    border: .5px solid #efefef;
+    padding: 5px;
+    background-color: #efefef;
+    cursor: pointer;
+}
+.reviewContainer .review .middle .chooseImages .listImagesChoosed{
+    margin-top: 5px;
+} 
+.reviewContainer .review .middle .chooseImages .listImagesChoosed img{
+    width: 15%;
+    margin: 5px;
+    border-radius: 4px;
+    border: .5px solid #efefef;
+}
+.reviewContainer .review .middle .content{
+    padding: 10px;
+    text-align: center;
+
+}
+.reviewContainer .review .middle .content textarea{
+    width: 100%;
+    height: 80px;
+    background-color: #efefef;
+    border-radius: 4px;
+    color: #111;
+    padding: 5px;
+    max-height: 80px;
+    max-width: 240px;
+    min-width: max-content;
+    min-height: max-content;
+}
+.reviewContainer .review .bottom{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.reviewContainer .review .bottom button{
+    border: .5px solid #a61713;
+    background: #a61713;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.reviewContainer .review .bottom button:hover{
+    background-color: #84130f;
+    transition: all .1s;
+}
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    
+}

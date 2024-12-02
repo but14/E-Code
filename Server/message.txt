@@ -1,0 +1,21 @@
+
+
+
+-(Front) Trang shoppage : xử lí khi click vào phần dưới cungd các query thì vẫn sẽ giwữ nguyên vị trí cho tới khi click vào TRang chủ thì mơí chạy lên trên.
+- (Front) - Xử lí suej kiện phần show ra list review của phần product detail. khi click vào các phân trang thì nó vaaxn sẽ  giữ nguyên vị trí chứu không chạy lên đầu trang.
+-(Front) Phần query của trang shop-Page( mới nhất, cũ nhất,rating cao nhất,...) : đang bị khi không có sản phẩm nào thì nó sẽ bị tràn xuống.
+- Reviews
+
+
+
+- "Ordered"     : đã lên đơn
+- "Shipping"    : đang được giao
+- "Processing"  : Đã giao chờ đánh giá
+- "Successfull" : đã hoàn thành
+
+
+
+
+- reduce()
+- slice()
+

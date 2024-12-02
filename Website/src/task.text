@@ -1,0 +1,45 @@
+- Trang mua hàng.
+- Phần Shop Admin:
+    + Trang đăng ký thành seller
+    + Trang quản lý sản phẩm (CRUD) (ok)
+
+
+- Shop page thiếu phần query. sắp xếp như ( price_asc, price_desc,...) (ok)
+- shop-page : xử lí sự kiện nếu click vào mục "Laptop xin xo" thì sẽ tự động roll đến phần "Danh mục" , và 3 cái vừa nói. (ok)
+- shope-page : kèm di con chuột vào phần danh mục, hiện con trỏ click được (ok)
+- phần Add Product: phần hiển thị category đag chưa có name
+- phần Cart : name product nếu tên dài hơn n kí tự thì để thành dấu ... (ok)
+
+
+
+MESSAGE TRONG TỐI NAY:
+- shope-page : Sửa lại dùm phần "tất cả sản phẩm", nó chưa roll được.
+- shope-page : Khi roll xuống, cho tới khi nhấn vào "TRang chính" thì mới roll lên trên, còn khi chọn các "Danh mục","Phân trang" 
+thì sẽ giữ nguyên trang tại vị trí phía dưới mà không roll lên trên.
+- Trang checkOut.
+- phần Cart : name product nếu tên dài hơn n kí tự thì để thành dấu ...
+- phần Add Product trang admin: phần hiển thị category đag chưa có name
+
+
+- Trang shop-page : đừng cho phần header cuộn xuống theo ==> chật trang quá
+- Trang product-detail : Khi chưa click chọn variant_product, hãy làm cho nó không thể "Add Cart" hoặc "mua hàng" được.
+- Trang checkOut : "http://localhost:4200/cart/checkout", đường dẫn sẽ như vậy, làm giao diện dùm tôi.Còn tôi thì làm phần xử lí backend là call api của 
+vnpay vào, và thanh toán thành công thì add 1 document vào Reviews.
+- Trang Reviews sản phẩm .
+
+
+
+- Product-list : Product đag hiển thị lỗi con cac
+
+của tao thịnh ngô : + viết backend order. sau khi có .
+
+
+
+###########
+
+- Trang home hiển thị list Sản phẩm đang lỗi giao diện . 
+- Trang List-Product lỗi hiển thị list sản phẩm.
+- Hình phân trang đang lỗi hiển thị.
+- List-product : chỉnh lại sao cho khi click vào các radio , và khi click vào nút reset( ) thì mấy nút này được lại bỏ chọn.
+- TRANG lIST-order của admi n : thêm 1 phần sort theo : [ giá giảm dần , giá tăng dần , mới nhất ..] và 1 thanh riêng biệt có thể lọc ra các đơn "Succesfull" hoặc là "Proccessing".
+

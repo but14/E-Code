@@ -1,0 +1,37 @@
+<!-- Review Container -->
+<div class="row reviewContainer">
+    <div class="col l-12 m-12 c-12 review">
+        <div class="top">
+            <span>Đánh Giá Sản Phẩm</span>
+            <button class="btnCloseReview"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="middle">
+            <!-- Nội dung đánh giá -->
+            <div class="content">
+                <textarea name="" id="reviewContextID" placeholder="Nội dung đánh giá..."></textarea>
+            </div>
+            <!-- Hình ảnh -->
+            <div class="chooseImages">
+                <input id="imagesRatingID" name="" type="file" (change)="handlePreViewRatingImages($event)" multiple>
+                <div id="listImagesChoosedID" class="listImagesChoosed">
+                    <!-- <div id="imgWrapper0" class="imgWrapper" style="position: relative; width: 15%; margin: 5px; border-radius: 4px;">  
+                        <button style="position: absolute; right: 0; top: 0; z-index: 99;">X</button>
+                        <img src="https://bouqs.com/cdn-cgi/image/height=454,fit=cover,quality=80,width=454,format=auto/media/W1siZiIsIjIwMjQvMDgvMjMvMTcvNDIvNDUvOTljODZmNTItMGM0MC00MDkwLTgzZDItNTJkYzZjY2RkOTBkL0ZBTEwyNF9ERUxJTEFIX09TXzAyNTNfV2ViLmpwZyJdXQ/FALL24_DELILAH_OS_0253_Web.jpg?sha=1fdacf040343961d" alt="" style="width: 100%;">
+                    </div> -->
+                </div>
+            </div>
+            <!-- Đánh giá sao -->
+            <div class="starRatingOfProduct">
+                <input id="starRatingOfProductID" type="text" hidden>
+                <span class="fa fa-star" (click)="starRatingForProduct('1')"></span>
+                <span class="fa fa-star" (click)="starRatingForProduct('2')"></span>
+                <span class="fa fa-star" (click)="starRatingForProduct('3')"></span>
+                <span class="fa fa-star" (click)="starRatingForProduct('4')"></span>
+                <span class="fa fa-star" (click)="starRatingForProduct('5')"></span>
+            </div>
+        </div>
+        <div class="bottom">
+            <button type="button" (click)="create_review()" name="" id="">Xác Nhận</button>
+        </div>
+    </div>
+</div>

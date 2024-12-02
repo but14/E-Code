@@ -1,0 +1,91 @@
+<div class="productManagementContainer">
+    <!-- Phần tiêu đề -->
+    <div class="title">
+        <span>Quản lý sản phẩm</span>
+        <span style="color: #444; font-size: 16px; font-weight: 400;">Kiểm tra, chỉnh sửa hoặc xóa dữ liệu sản phẩm,...</span>
+    </div>
+    <!-- Bảng sản phẩm -->
+    <div class="productTable">
+        <div class="titleTable">
+            <div class="" style="display: grid;">
+                <span>Product Table</span>
+                <span style="color: #777; font-size: 12px; font-weight: 400;">Xem một số thông tin chính của sản phẩm</span>
+            </div>
+            <button class="btnAddProduct" routerLink="/admin-shop/add-product">Thêm +</button>
+        </div>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                    <tr><td>STT</td><td>Tên</td><td>Hình</td><td>Loại</td><td>Giá</td><td>Lượt bán</td><td>Thao tác</td></tr>
+                </thead>
+                <tbody>
+                    <!-- 1 hàng -->
+                    <ng-container *ngIf="listProduct.length > 0 ; else elseBlock">
+                        <tr *ngFor="let product of listProduct, let i = index">
+                            <td>{{ product.sort + 1 }}</td>
+                            <td class="product-name">{{product.product_name}}</td>
+                            <td>
+                                <img [src]="baseUrl + product.product_imgs[0].alt" alt="">
+                            </td>
+                            <td>{{product.category_name}}</td>
+                            <td>{{product.product_supp_price | number : '1.0-0' }} đ</td>
+                            <td>{{product.product_sold_quantity}}</td>
+                            <td class="operationCol">
+                                <a routerLink="/product-detail/{{product.product_slug}}"
+                                    [queryParams]="{
+                                        productId : product._id
+                                    }"
+                                    class="btnDetail">Chi tiết
+                                </a>
+                                <a routerLink="/product-detail/{{product._id}}"
+                                    class="btnEdit">Sửa
+                                </a>
+                                <a routerLink="/product-detail/{{product._id}}"
+                                    class="btnDelete">
+                                Xóa</a>
+                            </td>
+                        </tr>
+                    </ng-container>
+                    <ng-template #elseBlock>
+                        <tr >
+                            <td>Nothing</td>
+                            <td class="product-name">Nothing</td>
+                            <td>
+                                <img [src]="" alt="Nothing">
+                            </td>
+                            <td>Nothing</td>
+                            <td>Nothing</td>
+                            <td>Nothing</td>
+                            <td class="operationCol">
+                                <a 
+                                    class="btnDetail">Chi tiết
+                                </a>
+                                <a 
+                                    class="btnEdit">Sửa
+                                </a>
+                                <a 
+                                    class="btnDelete">
+                                Xóa</a>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <!-- 1 hàng -->
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+            <button type="button" class="">&laquo;</button>
+            <button type="button" [class.active]="isActive(1)" (click)="goToPage(1)">1</button>
+            <button type="button" [class.active]="isActive(2)" (click)="goToPage(2)">2</button>
+            <button type="button" [class.active]="isActive(3)" (click)="goToPage(3)">3</button>
+            <button type="button" [class.active]="isActive(4)" (click)="goToPage(4)">4</button>
+            <button type="button" [class.active]="isActive(5)" (click)="goToPage(5)">5</button>
+            <button type="button" [class.active]="isActive(6)" (click)="goToPage(6)">6</button>
+            <button type="button" class="" >&raquo;</button>
+          </div>
+          
+          
+    </div>
+</div>

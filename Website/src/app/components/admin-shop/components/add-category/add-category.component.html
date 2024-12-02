@@ -1,0 +1,26 @@
+<div class="form-container">
+    <div class="form-group">
+        <label for="product-name">Tên danh mục</label>
+        <input type="text" id="product-name" name="category_name"   placeholder="Tên danh muc" #category_name>
+    </div>
+    <!-- <div class="form-group">
+        <label for="product-image">Hình sản phẩm</label>
+        <small>Tìm ảnh đưa link vào (không phải là ảnh)</small>
+        <input type="text" id="product-image" name="category_img" #category_img>
+    </div> -->
+    <div class="form-group">
+        <label for="short-description">Mô tả ngắn về danh mục này</label>
+        <textarea id="short-description" name="s_descrip" rows="4" placeholder="Miêu tả ngắn" #s_descrip></textarea>
+    </div>
+    <div class="form-group">
+        <label for="parent-category">Chọn danh mục cha</label>
+        <select  id="parent-category" [(ngModel)]="parentCategory">
+            <option *ngFor="let category of parentCategories"  [ngValue]="category" >{{ category.name }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="short-description">Xác nhận</label>
+        <button type="button" (click)="create_category(category_name.value,s_descrip.value)">Submit</button>
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="userInfo">
+    <div class="title">
+        <h2>Hồ Sơ Của Tôi</h2>
+        <span>Quản lý thông tin hồ sơ để bảo mật tài khoản</span>
+    </div>
+    <div class="formEditInfo" *ngIf="userData">
+        <form action="" method="post">
+            <!-- Hình đại diện -->
+            <div class="avatar">
+                <img id="avatarInfoID" [src]="baseUrl + userData.avatar" alt="">
+                <!-- <input class="btnChooseImage" placeholder="" type="file" multiple="none" name="" id="btnChooseImageID" value="" autocomplete="off" (change)="handleProfileCoverImageUpdate()"> -->
+            </div>
+            <div class="inputWrapper">
+                <!-- Tên đăng nhập -->
+                <span>Tên đăng nhập</span>
+                <!-- Mặc định value là tên đăng nhập của User đó -->
+                <input type="text" [placeholder]="userData.user_name" [value]="userData.user_email" name="" id="" disabled>
+            </div>
+            <div class="inputWrapper">
+                <!-- Tên -->
+                <span>Tên</span>
+                <!-- Mặc định value là họ tên của User đó -->
+                <input type="text" [placeholder]="userData.user_name" [value]="userData.user_name" name="" id="">
+            </div>
+            <div class="inputWrapper">
+                <!-- Email -->
+                <span>Email</span>
+                <!-- Mặc định value là email của User đó -->
+                <input type="email" [placeholder]="userData.user_email" [value]="userData.user_email" name="" id="">
+            </div>
+            <div class="inputWrapper">
+                <!-- Số điện thoại -->
+                <span>Số điện thoại</span>
+                <input type="tel" maxlength="10" name="" id="" [value]="userData.user_phone" [placeholder]="userData.user_phone">
+            </div>
+            
+            <div class="inputWrapper">
+                <!-- Ngày sinh -->
+                <span>Ngày sinh</span>
+                <input type="text" [placeholder]="userData.user_birth" [value]="userData.user_birth" name="" id="">
+
+            </div>
+            <div class="inputWrapper">
+                <!-- Ngày sinh -->
+                <span>Phân quyền</span>
+                <input type="text" [placeholder]="userData.user_role" [value]="userData.user_role" name="" id="">
+
+            </div>
+            <!-- Lưu -->
+            <button type="button" class="btnSave" disabled>XEM THONG TIN</button>
+        </form>
+    </div>
+</div>

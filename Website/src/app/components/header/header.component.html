@@ -1,0 +1,119 @@
+<div id="headerID" class="row header">
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-10 c-o-1">
+        <div class="topOfHeaderContainer">
+            <div class="left">
+                <ng-container *ngIf="checkAdmin == false else elseBlock1">
+                    <a href="#" style="padding-left: 0px;">
+                        Kênh người bán
+                    </a>
+                    <a href="#" >
+                        Trở thành người bán WolfTechE
+                    </a>
+                    <a href="#" >
+                        Tải ứng dụng
+                    </a>
+                    <a href="#" style="border-right: none;">
+                        Kết nối <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram" style="margin-left: 5px;"></i>
+                    </a>
+                </ng-container>
+                <ng-template #elseBlock1>
+                    <a href="#" style="padding-left: 0px;" routerLink="admin-shop/product-management">
+                        Quản lí sản phẩm
+                    </a>
+                    <a href="#" routerLink="admin-shop/category-management">
+                        Quản lí danh mục
+                    </a>
+                    <a href="#" routerLink="admin-shop">
+                        Quản lí đơn hàng
+                    </a>
+                    <a href="#" style="border-right: none;" routerLink="admin-shop">
+                        Kết nối <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram" style="margin-left: 5px;"></i>
+                    </a>
+                </ng-template>
+            </div>
+            <div class="right">
+                <ng-container *ngIf="login_boolean == false else elseBlock">
+                    <a href="#">
+                        <i class="fa-solid fa-phone"></i> Hỗ trợ
+                    </a>
+                    <a href="#" routerLink="sign-up">
+                            Đăng ký
+                    </a>
+                    <a href="#" routerLink="sign-in">
+                            Đăng nhập
+                    </a>
+                </ng-container>
+                <ng-template #elseBlock>
+                    <button type="button" href="#" (click)="logout()">
+                        <i class="fa fa-sign-out"></i>Đăng xuất
+                    </button>
+                    <a href="#">
+                        WELCOM TO <b>{{ userData.user_name}}</b>
+                    </a>
+                </ng-template>
+            </div>
+        </div>
+        <div class="bottomOfHeaderContainer">
+            <div class="logo">
+                <img routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" src="resource/img/logo-no-background.png" alt="">
+            </div>
+            <div class="search">
+                <form action="">
+                    <input type="text" name="search_query" placeholder="Tìm kiếm ..." #search_query>
+                    <button class="btnFindInSearch" type="button" (click)="searching(search_query.value) ; reset(search_query)">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="topSearchList">
+                    <a href="#">
+                        Hoa hồng
+                    </a>
+                    <a href="#">
+                        Hoa lan
+                    </a>
+                    <a href="#">
+                        Hoa cẩm tú cầu
+                    </a>
+                    <a href="#">
+                        Hoa tulip
+                    </a>
+                    <a href="#">
+                        Hoa hòe
+                    </a>
+                    <a href="#">
+                        Hoa anh đào
+                    </a>
+                    <a href="#">
+                        Hoa mắt
+                    </a>
+                    <a href="#">
+                        Hoa oải hương
+                    </a>
+                    <a href="#">
+                        Hoa sinh nhật
+                    </a>
+                    <a href="#">
+                        Hoa phan
+                    </a>
+                </div>
+            </div>
+            <div class="rightHeader">
+                <button class="btnOpenFormSearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="btnNotification">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="numberOfNotificate">0</span>
+                </button>
+                <button class="btnCart" routerLink="/cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="numberOfCart">{{length_cart}}</span>
+                </button>
+                <button class="btnProfileUser" routerLink="/profile-user/info">
+                    <ng-container *ngIf="userData else elseBlock2"><img [src]="baseUrl + userData.avatar" alt="userData"></ng-container> 
+                    <ng-template #elseBlock2> <img src="resource/img/th.jpg" alt=""></ng-template>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

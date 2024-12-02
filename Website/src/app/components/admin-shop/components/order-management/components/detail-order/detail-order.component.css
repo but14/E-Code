@@ -1,0 +1,126 @@
+.detailOrderContainer{
+    background-color: #efefef2a;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailOrderContainer .detailOrder{
+    position: absolute;
+    top: 150px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: .5px solid #efefef;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+.detailOrderContainer .btnComeBackOrderList{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 10px 20px;
+    border: .5px solid #efefef;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.detailOrderContainer .btnComeBackOrderList i{
+    transition: all .2s;
+}
+.detailOrderContainer .btnComeBackOrderList:hover i{
+    transform: translateX(-3px);
+}
+
+.detailOrder .titleDetailOrder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+    padding: 10px;
+}
+.detailOrder .order{
+    
+}
+.detailOrder .order span{
+    font-size: 16px;
+    font-weight: 500;
+}
+.detailOrder .order .buyerName{
+   padding: 5px 10px;
+}
+.detailOrder .order .buyerAddress{
+   padding: 5px 10px;
+   padding-bottom: 15px;
+   border-bottom: .5px solid #efefef;
+}
+.detailOrder .order .productList{
+    padding: 10px;
+    border-bottom: .5px solid #efefef;
+}
+.detailOrder .order .productList .product{
+    padding: 8px;
+    margin: 5px 0px;
+    border: .5px solid #efefef;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.detailOrder .order .productList .product .top{
+    display: grid;
+    justify-content: left;
+}
+.detailOrder .order .productList .product .top span{
+    padding: 5px 0px;
+}
+.detailOrder .order .middle{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.detailOrder .order .middle .status{
+    display: grid;
+    align-items: start;
+    height: fit-content;
+}
+.detailOrder .order .middle .status span{
+    padding: 5px 0px;
+}
+.detailOrder .order .middle .payment{
+    display: grid;
+    align-items: center;
+    
+}
+.detailOrder .order .middle .payment span{
+    padding: 5px 0px;
+}
+.detailOrder .order .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+.detailOrder .order .bottom button{
+    padding: 10px 20px;
+    border: .5px solid #111;
+    background-color: whitesmoke;
+    color: #111;
+    cursor: pointer;
+    transition: ease-out .2s;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+}
+.detailOrder .order .bottom button:hover{
+    background-color: #1f1f1f;
+    color: whitesmoke;
+}
+.detailOrder .order .bottom button:active{
+    background-color: black;
+}

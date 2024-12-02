@@ -1,0 +1,172 @@
+/* CSS News */
+.news{
+    background-color: white;
+    margin: 0;
+}
+.news .col{
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+}
+.news .leftNews{
+    /* background-color: black; */
+    height: 100%;
+    width: 65%;
+    border-radius: 4px;
+}
+.news .leftNews .slideNews{
+    position: relative;
+    height: 100%;
+}
+.news .leftNews .slideNewsImage{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+    scrollbar-width: none;
+    scroll-snap-type: x;
+    scroll-behavior: smooth;
+}
+.slideNews::-webkit-scrollbar-track {
+    
+}
+.slideNews::-webkit-scrollbar {
+    
+}
+
+.slideNews::-webkit-scrollbar-thumb {
+
+}
+.news .leftNews .slideNews img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    /* margin-right: 4px; */
+    margin: 0px 2px;
+}
+.news .leftNews .slideNews .btnLeftSlideNews{
+    position: absolute;
+    left: 0;
+    /* top: 45%; */
+    top: 0;
+    bottom: 0;
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+}
+.news .leftNews .slideNews .btnLeftSlideNews:hover{
+    background-color: rgba(0, 0, 0, 0.201);
+
+}
+.news .leftNews .slideNews .btnRightSlideNews{
+    position: absolute;
+    right: 0;
+    /* top: 45%; */
+    top: 0;
+    bottom: 0;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+}
+.news .leftNews .slideNews .btnRightSlideNews:hover{
+    background-color: rgba(0, 0, 0, 0.201);
+
+}
+.news .rightNews{
+    height: 100%;
+    width: 35%;
+    display: grid;
+}
+.news .rightNews img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.news .rightNewsSub1{
+    padding: 0px 0px 2px 4px;
+    height: 100%;
+    border-radius: 4px;
+}
+.news .rightNewsSub2{
+    padding: 2px 0px 0px 4px;
+    padding-bottom: 0px;
+    height: 100%;
+    border-radius: 4px;
+}
+/* Hết CSS News */
+
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .news{
+        /* margin-top: 102px; */
+    }
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .news{
+        /* margin-top: 102px; */
+    }
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    .news{
+        /* margin-top: 102px; */
+    }
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    /* News */
+    .news .col{
+        padding: 20px 10px;
+        display: grid;
+        align-items: center;
+    }
+    .news{
+        /* margin-top: 62px; */
+    }
+    .news .leftNews{
+        /* background-color: black; */
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+    }
+    .news .rightNews{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    } 
+    .news .rightNewsSub1{
+        padding: 4px 2px 0px 0px;
+        height: 100%;
+        border-radius: 4px;
+    }
+    .news .rightNewsSub2{
+        padding: 4px 0px 0px 2px;
+        padding-bottom: 0px;
+        height: 100%;
+        border-radius: 4px;
+    }
+}

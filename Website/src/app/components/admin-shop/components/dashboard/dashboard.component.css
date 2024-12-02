@@ -1,0 +1,125 @@
+.dashboardContainer{
+    
+}
+.dashboardContainer .titleDashboard{
+    display: grid;
+    padding: 10px;
+    padding-top: 0px;
+}
+.dashboardContainer .titleDashboard span{
+    display: block;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 3px 0px;
+}
+.dashboardContainer .numeralBox{
+    /* padding: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.dashboardContainer .numeralBox .numeralContainer{
+    width: 25%;
+    padding: 10px;
+}
+.dashboardContainer .numeralBox .numeral{
+    background-color: white;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    width: 100%;
+}
+.dashboardContainer .numeralBox .numeral .top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: .5px solid #efefef;
+}
+.dashboardContainer .numeralBox .numeral .top .leftTop span{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    padding: 2px 0px;
+}
+.dashboardContainer .numeralBox .numeral .top .rightTop{
+ 
+}
+.dashboardContainer .numeralBox .numeral .top .rightTop img{
+    width: 50px; 
+    background-image: linear-gradient(195deg,#42424a,#191919);
+    padding: 13px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(64,64,64,.4);
+}
+.dashboardContainer .numeralBox .numeral .bottom{
+    padding: 10px;
+}
+.dashboardContainer .numeralBox .numeral .bottom span{
+    color: #555;
+    font-weight: 400;
+    font-size: 14px;
+}
+.dashboardContainer .chartBox{
+    padding: 10px;
+}
+.dashboardContainer .chartBox .chartContainer{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    width: 100%;
+    padding: 10px;
+}
+.dashboardContainer .chartBox .chartContainer .top{
+    display: grid;
+}
+.dashboardContainer .chartBox .chartContainer .top span{ 
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    padding: 2px 0px;
+}
+.dashboardContainer .chartBox .chartContainer .middle{
+    padding: 10px;
+}
+.dashboardContainer .chartBox .chartContainer .middle canvas{
+    height: 400px;
+}
+.dashboardContainer .chartBox .chartContainer .middle .monthlySalesChart{
+    
+}
+.dashboardContainer .chartBox .chartContainer .bottom{
+    padding: 10px;
+}
+.dashboardContainer .chartBox .chartContainer .bottom span{
+    font-size: 15px;
+    font-weight: 400;
+    color: #555;
+}
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .dashboardContainer .numeralBox .numeralContainer{
+    width: 100%;
+    padding: 10px;
+}
+}

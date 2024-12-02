@@ -1,0 +1,152 @@
+<!-- Phần danh sách sản phẩm -->
+<div class="row productListContainer">
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 productListMain">
+        <div id="leftOfProductListID" class="leftOfProductList">
+            <!-- Nút đóng bộ lọc sản phẩm (trên điện thoại) -->
+            <div class="btnCloseFilterProductList">
+                <button (click)="closeFilterProductList()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="titleFilterProductList">
+                <span><i class="fa-solid fa-filter"></i> BỘ LỌC TÌM KIẾM</span>
+            </div>
+            <div class="filterBasePlace">
+                <div class="filterBasePlaceCheckbox"><b>Nơi bán</b></div>
+                <div class="filterBasePlaceCheckbox">
+                    <input type="radio" name="location" value="saigon" (click)="updateLocation('')">Reset
+                </div>
+                <div class="filterBasePlaceCheckbox">
+                    <input type="radio" name="location" value="saigon" (click)="updateLocation('saigon')"> TP. Hồ Chí Minh
+                </div>
+                <div class="filterBasePlaceCheckbox">
+                    <input type="radio" name="location" value="hanoi" (click)="updateLocation('hanoi')"> Hà Nội
+                </div>
+                <div class="filterBasePlaceCheckbox">
+                    <input type="radio" name="location" value="danang" (click)="updateLocation('danang')"> Đà Nẵng
+                </div>
+                <div class="filterBasePlaceCheckbox">
+                    <input type="radio" name="location" value="dongnai" (click)="updateLocation('dongnai')"> Đồng Nai
+                </div>
+                <div class="filterBasePlaceCheckbox">
+                    <input type="radio" name="location" value="binhduong" (click)="updateLocation('binhduong')"> Bình Dương
+                </div>
+            </div>
+            
+            <div class="filterBaseBrand">
+                <div class="filterBaseBrandCheckbox">Thương Hiệu</div>
+                <div class="filterBaseBrandCheckbox"><input type="radio" name="brand" value="nike" (click)="updateBrand('')">Reset</div>
+                <div class="filterBaseBrandCheckbox"><input type="radio" name="brand" value="nike" (click)="updateBrand('nike')"> Nike</div>
+                <div class="filterBaseBrandCheckbox"><input type="radio" name="brand" value="adidas" (click)="updateBrand('adidas')">Adidas</div>
+                <div class="filterBaseBrandCheckbox"><input type="radio" name="brand" value="xiaomi" (click)="updateBrand('xiaomi')"> Xiaomi</div>
+                <div class="filterBaseBrandCheckbox"><input type="radio" name="brand" value="sunhouse" (click)="updateBrand('sunhouse')">SUNHOUSE</div>
+                <div class="filterBaseBrandCheckbox"><input type="radio" name="brand" value="panasonic" (click)="updateBrand('panasonic')">Panasonic</div>
+            </div>
+
+            <div class="filterBaseRating">
+                <div class="">Đánh Giá</div>
+                <!-- 5 sao -->
+                <button class="filterBaseRatingChoice" (click)="ratingFilter(4)">
+                    <span>4 sao trở lên</span> <br/>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                </button>
+                <!-- 4 sao -->
+                <button class="filterBaseRatingChoice" (click)="ratingFilter(3)">
+                    <span>3 sao trở lên</span> <br/>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                </button>
+                <!-- 3 sao -->
+                <button class="filterBaseRatingChoice" (click)="ratingFilter(2)"> 
+                    <span>2 sao trở lên</span> <br/>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </button>
+                <!-- 2 sao -->
+                <button class="filterBaseRatingChoice" (click)="ratingFilter(1)">
+                    <span>1 sao trở lên</span> <br/>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </button>
+            </div>
+            <div class="filterBaseCategory">
+                <!-- Danh mục -->
+            </div>
+            <div class="btnActiveFilter">
+                <button (click)="reset()">
+                    Xóa tất cả query
+                </button>
+            </div>
+        </div>
+        <div class="rightOfProductList">
+            <!-- Nút mở Bộ lọc sản phẩm trên điện thoại -->
+            <div class="btnOpenFilterProductList">
+                <button (click)="openFilterProductList()"><span><i class="fa-solid fa-filter"></i> BỘ LỌC TÌM KIẾM</span></button>
+            </div>
+            <!-- Lọc theo giá -->
+            <div class="filterByPrice">
+                <span>Sắp xếp theo</span>
+                <select name="sortBy" id="" (change)="productByCondition(sortBy.value)" #sortBy>                    
+                    <option value="">Mặc định</option>
+                    <option value="price_asc">Giá tăng dần</option>
+                    <option value="price_desc">Giá giảm dần</option>
+                    <option value="time_desc">Mới nhất</option>
+                    <option value="sales">Lượt mua</option>
+                </select>
+            </div>
+            <!-- List sản phẩm -->
+            <div class="row listSuggest">
+                <ng-container *ngIf="list_product.length > 0">
+                    <div class="col l-3 m-3 c-6 btnSuggestItemContainer" *ngFor="let product of list_product">
+                        <button routerLink="/product-detail/{{product.product_name}}"
+                        [queryParams]="{
+                            idProduct : product._id
+                        }"
+                         class="btnSuggestItem">
+                            <div class="suggestItemSaleTag">
+                                -50%
+                            </div>
+                            <img [src]="baseUrl + product.product_imgs[0].alt" alt="">
+                            <span class="productName">{{ product.product_name }}</span>
+                            <div class="suggestItemPriceSale">
+                                <span class="suggestItemPrice">{{product.product_supp_price | number : '1.0-0' }} đ</span>
+                            </div>
+                            <div class="ratingOfProduct">
+                                <div class="starRatingOfProductBox">
+                                    <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 1" style="color: red;"></i>
+                                    <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 2" style="color: red;"></i>
+                                    <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 3" style="color: red;"></i>
+                                    <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 4" style="color: red;"></i>
+                                    <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 5" style="color: red;"></i>
+                                </div>
+                                <span class="suggestItemSold">Đã bán {{product.product_sold_quantity}}</span>
+                            </div>
+                        </button>
+                    </div>
+                </ng-container>
+            </div>
+            <!-- Pagination -->
+            <div id="paginationInShopPageID" class="pagination">
+                <button class="">&laquo;</button>
+                <button  class="active" (click)="updatePage($event , 1)">1</button>
+                <button  class="" (click)="updatePage($event, 2)">2</button>
+                <button  class="" (click)="updatePage($event, 3)">3</button>
+                <button  class="" (click)="updatePage($event, 4)">4</button>
+                <button  class="" (click)="updatePage($event, 5)">5</button>
+                <button  class="" (click)="updatePage($event , 6)">6</button>
+                <button  class="">&raquo;</button>
+            </div>
+        </div>
+    </div>
+</div>

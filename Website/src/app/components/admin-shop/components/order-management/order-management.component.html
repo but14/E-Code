@@ -1,0 +1,99 @@
+<div class="productManagementContainer">
+    <!-- Phần tiêu đề -->
+    <div class="title">
+        <span>Quản lý đơn hàng</span>
+        <span style="color: #444; font-size: 16px; font-weight: 400;">Kiểm tra, xử lý các đơn đặt hàng</span>
+    </div>
+    <div class="searchBox">
+        <input type="text" placeholder="Tìm kiếm..." name="order_id" id="" value="" #order_id>
+        <button class="btnDetailOrder" routerLink="detail-order" [queryParams]="{ orders_ID : order_id.value  }"><i class="fas fa-search"></i>Chi tiết</button>
+    </div>     
+    
+    <!-- Bảng sản phẩm -->
+    <div class="productTable">
+        <div class="titleTable">
+            <div class="" style="display: grid;">
+                <span>Order List</span>
+                <!-- <span style="color: #777; font-size: 12px; font-weight: 400;">Xem một số thông tin chính của sản phẩm</span> -->
+            </div>
+            <!-- <button class="btnAddProduct" routerLink="/admin-shop/add-product">Thêm +</button> -->
+        </div>
+        <div class="tableContainer">
+            <div class="orderListNav">
+                <button id="btnDefaultID" type="button" class="btnFilterOrder checked" (click)="filter_status('' , $event)">Mặc định </button>
+                <button id="btnProcessingID" type="button" class="btnFilterOrder" (click)="filter_status('Ordered', $event)"> Đã lên đơn </button>
+                <button id="btnProcessingID" type="button" class="btnFilterOrder" (click)="filter_status('Shipping', $event)"> Đang được vận Chuyển</button>
+                <button id="btnProcessingID" type="button" class="btnFilterOrder" (click)="filter_status('Processing', $event)"> Giao thành công và chờ đánh giá </button>
+                <button id="btnSuccessfulID" type="button" class="btnFilterOrder" (click)="filter_status('Successfull' , $event)"> Hoàn thành </button>
+                <select  name="sortBy" id="" (change)="change_sortBy(sortBy.value)" #sortBy>
+                    <option value="">Mặc định</option>
+                    <option value="price_asc">Giá tăng dần</option>
+                    <option value="price_desc">Giá giảm dần</option>
+                    <option value="time_asc">Mới nhất</option>
+                </select>
+            </div>
+            <!-- Order -->
+            <ng-container *ngIf="listOrder.length > 0 else elseBlock">
+                <div class="order" *ngFor="let order of listOrder">
+                    <div class="buyerName">
+                        <span>Mã Đơn Hàng : <span style="color: #222; font-weight: 400;">{{order._id}}</span></span>
+                    </div>
+                    <div class="buyerName">
+                        <span>Mã tài khoản : <span style="color: #222; font-weight: 400;">{{order.customer_id}}</span></span>
+                    </div>
+                    <div class="buyerName">
+                        <span>Tên người nhận : <span style="color: #222; font-weight: 400;">{{order.order_buyer}}</span></span>
+                    </div>
+                    <div class="middle">
+                        <div class="status">
+                            <ng-content *ngIf="order.order_status == 'Successfull'">
+                                <span>Trạng thái đơn hàng: <span style="color: #27ae60; font-weight: 600; font-size: 20px;">{{order.order_status}}</span></span>
+                            </ng-content>
+                            <ng-content *ngIf="order.order_status == 'Processing'">
+                                <span>Trạng thái đơn hàng: <span style="color: #555; font-weight: 600; font-size: 20px;">{{order.order_status}}</span></span>
+                            </ng-content>
+                            <span>Thời gian tạo đơn : <span style="color: #222; font-weight: 400; font-size: 14px;">{{ format_date(order.createdAt)}}</span></span>
+                        </div>
+                        <div class="payment">  
+                            <span>Total Cost: <span style="color: #222; font-weight: 400; font-size: 18px;">{{order.order_total_cost | number : '1.0-0' }}</span> vnđ</span>
+                            <span style="border-bottom: .5px solid #efefef; padding-bottom: 10px;">Phí giao hàng : <span style="color: #222; font-weight: 400; font-size: 18px;">{{order.order_shipping_cost | number : '1.0-0'}}</span> vnđ</span>
+                            <span>Payment Cost: <span style="color: #222; font-weight: 400; font-size: 18px;">{{order.order_payment_cost | number : '1.0-0'}}</span> vnđ</span>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <!-- <button class="btnUpdateStatusOrder" routerLink="detail-order">Cập nhật trạng thái</button> -->
+                        <span style="margin-right: 5px;">Cập nhật trạng thái: </span>
+                        <select class="selectUpdateStatus" name="status_update" id="" (change)="update_status_order(order._id , status_update.value)" #status_update>
+                            <option value="">Hiện tại : {{order.order_status }}</option>
+                            <option value="Ordered">Ordered - Đã lên đơn</option>
+                            <option value="Shipping">Shipping - Đang được vận chuyển</option>
+                            <option value="Processing">Processing - Giao thành công và chờ đánh giá</option>
+                            <option value="Successfull">Successfull - Hoàn thành</option>
+                        </select>
+                        <button class="btnDetailOrder" routerLink="detail-order" [queryParams]="{ orders_ID : order._id  }">Chi tiết</button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #elseBlock>
+                <div class="" style="text-align: center; padding: 10px; display: grid; align-items: center; justify-content: center;">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/no-order-history-illustration-download-in-svg-png-gif-file-formats--previous-orders-past-purchases-records-empty-ecommerce-states-pack-e-commerce-shopping-illustrations-9741057.png?f=webp" style="width: 200px;"/>
+                    <span style="display: block; padding: 5px;">Chưa có đơn hàng nào...</span>
+                </div>
+            </ng-template>
+             <!-- Order -->  
+        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+            <button type="button" class="">&laquo;</button>
+            <button type="button" [class.active]="isActive(1)" (click)="goToPage(1)">1</button>
+            <button type="button" [class.active]="isActive(2)" (click)="goToPage(2)">2</button>
+            <button type="button" [class.active]="isActive(3)" (click)="goToPage(3)">3</button>
+            <button type="button" [class.active]="isActive(4)" (click)="goToPage(4)">4</button>
+            <button type="button" [class.active]="isActive(5)" (click)="goToPage(5)">5</button>
+            <button type="button" [class.active]="isActive(6)" (click)="goToPage(6)">6</button>
+            <button type="button" class="" >&raquo;</button>
+        </div>
+
+    </div>
+    <router-outlet></router-outlet>
+</div>

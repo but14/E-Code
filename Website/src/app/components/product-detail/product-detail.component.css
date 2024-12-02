@@ -1,0 +1,1093 @@
+#backHeaderID{
+    width: 100%;
+    height: 131px;
+}
+/* Product Detail */
+
+/* CSS Phần đường dẫn điều hướng */
+.productDetailInfo .breadcrumbContainer{
+    /* padding: 10px; */
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.productDetailInfo .breadcrumbContainer ul.breadcrumb {
+    padding: 10px 16px;
+    margin: 0px;
+    list-style: none;
+}
+.productDetailInfo .breadcrumbContainer ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    font-weight: 400;
+}
+.productDetailInfo .breadcrumbContainer ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+.productDetailInfo .breadcrumbContainer ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+.productDetailInfo .breadcrumbContainer ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+/* Hết CSS Phần đường dẫn điều hướng */
+
+/* CSS phần đầu tiên (thông tin của sản phẩm) */
+.productDetailInfo{
+    margin: 0;
+    /* margin-top: 102px; */
+}
+.productDetailInfo .productInfoContainer{ 
+    padding: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.productDetailInfo .leftProductDetail{
+    display: grid;
+    width: 40%;
+}
+.productDetailInfo .rightProductDetail{
+    /* display: grid; */
+    width: 60%;
+    padding: 5px 30px;
+    position: relative;
+}
+.productDetailInfo .leftProductDetail .imageOfProduct{
+    
+}
+.productDetailInfo .leftProductDetail .imageOfProduct .imageOfProductActived{
+    
+}
+.productDetailInfo .leftProductDetail .imageOfProduct .imageOfProductActived img{
+    width: 100%;
+    height: 498px;
+    border-radius: 5px;
+    object-fit: contain;
+    /* border: .5px solid black;
+    border-radius: 6px; */
+}  
+.productDetailInfo .leftProductDetail .imageOfProduct .listImageOfProduct{
+    display: flex;
+    padding: 5px;
+}
+.productDetailInfo .leftProductDetail .imageOfProduct .listImageOfProduct button{
+    background-color: transparent;
+    border: .5px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all .1s;
+}
+.productDetailInfo .leftProductDetail .imageOfProduct .listImageOfProduct .choosed{
+    border: .5px solid #a61713;
+}
+.productDetailInfo .leftProductDetail .imageOfProduct .listImageOfProduct button:hover{
+    background-color: #efefef;
+}
+.productDetailInfo .leftProductDetail .imageOfProduct .listImageOfProduct button img{   
+    width: 100%;
+    height: 91px;
+    border-radius: 5px;
+    object-fit: contain;
+}
+.productDetailInfo .leftProductDetail .btnLikeProduct{
+    /* border: .5px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: black;
+    font-weight: 300;
+    font-size: 17px;
+
+}
+.productDetailInfo .leftProductDetail .btnLikeProduct button{
+    background-color: white;
+    border-radius: 50%;
+    padding: 7px 8px;
+    border: none;
+    color: #a61713;
+    cursor: pointer;
+    margin: 10px;
+}
+.productDetailInfo .leftProductDetail .btnLikeProduct button:hover{
+    border: none;
+    color: white;
+    background-color: #a61713;
+}
+.productDetailInfo .rightProductDetail .nameOfProduct{
+    font-weight: 400;
+    font-size: 26px;
+}
+.productDetailInfo .rightProductDetail .ratingOfProduct{
+    font-weight: 300;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productDetailInfo .rightProductDetail .ratingOfProduct i{
+    margin-right: 5px;
+    color: #a61713;
+}
+.productDetailInfo .rightProductDetail .ratingOfProduct .starRatingOfProduct span{
+    cursor: pointer;
+}
+.productDetailInfo .rightProductDetail .ratingOfProduct .starRatingOfProduct span:hover{    
+    color: #a61813a4;
+}
+.productDetailInfo .rightProductDetail .ratingOfProduct .checked{
+    color: #a61713;
+}
+.productDetailInfo .rightProductDetail .priceOfProduct{
+    font-weight: 400;
+    font-size: 32px;
+    color: #a61713;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.productDetailInfo .rightProductDetail .policyOfProduct{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.productDetailInfo .rightProductDetail .policyOfProduct .titlePolicyOfProduct{
+    font-weight: 400;
+    font-size: 15px;
+    color: dimgray;
+    width: 30%;
+}
+.productDetailInfo .rightProductDetail .policyOfProduct .contentPolicyOfProduct{
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+    width: 70%;
+}
+.productDetailInfo .rightProductDetail .policyOfProduct .contentPolicyOfProduct i{
+    color: #a61713;
+    margin-right: 5px;
+}
+.productDetailInfo .rightProductDetail .transportOfProduct{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+.productDetailInfo .rightProductDetail .transportOfProduct .titleTransportOfProduct{
+    font-weight: 400;
+    font-size: 15px;
+    color: dimgray;
+    width: 30%;
+}
+.productDetailInfo .rightProductDetail .transportOfProduct .contentTransportOfProduct{
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+    width: 70%;
+}
+.productDetailInfo .rightProductDetail .transportOfProduct .contentTransportOfProduct i{
+    color: #a61713;
+    margin-right: 5px;
+}
+.productDetailInfo .rightProductDetail .quantityOfProduct{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+.productDetailInfo .rightProductDetail .quantityOfProduct .titleQuantityOfProduct{
+    font-weight: 400;
+    font-size: 15px;
+    color: dimgray;
+    width: 30%;
+}
+.productDetailInfo .rightProductDetail .quantityOfProduct .choiceQuantityOfProduct{
+    width: 70%;
+}
+.productDetailInfo .rightProductDetail .quantityOfProduct .choiceQuantityOfProduct button{
+    background-color: transparent;
+    border: .2px solid dimgray;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.productDetailInfo .rightProductDetail .quantityOfProduct .choiceQuantityOfProduct button:hover{
+    border: .5px solid #a61713;
+}
+.productDetailInfo .rightProductDetail .quantityOfProduct .choiceQuantityOfProduct input{
+    width: 30px;
+    height: 100%;
+    border: none;
+    text-align: center;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .titleVariantOfProduct{
+    font-weight: 400;
+    font-size: 15px;
+    color: dimgray;
+    width: 30%;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .choiceVariantOfProduct{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .choiceVariantOfProduct .btnAddVariant{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    border: .5px solid #efefef;
+    border-radius: 4px;
+    background-color: transparent;
+    width: 35%;
+    margin: 0px 5px 5px 0px;
+    transition: all .2s;
+    cursor: pointer;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .choiceVariantOfProduct .choosed{
+    background-color: #efefef;
+    border: .5px solid #a61713;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .choiceVariantOfProduct .btnAddVariant:hover{
+    background-color: #efefef;
+    /* border: .5px solid #111; */
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .choiceVariantOfProduct .btnAddVariant span{
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.productDetailInfo .rightProductDetail .variantOfProduct .choiceVariantOfProduct .btnAddVariant img{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    object-fit: cover;    
+    object-position: center;
+    border: .5px solid #efefef;
+}
+.productDetailInfo .rightProductDetail .btnBuyProduct{
+    margin-top: 40px;
+    /* position: absolute;
+    bottom: 50px; */
+}
+.productDetailInfo .rightProductDetail .btnBuyProduct .btnAddToCart{
+    border: .5px solid #a61713;
+    background-color: transparent;
+    padding: 15px;
+    color: #a61713;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.productDetailInfo .rightProductDetail .btnBuyProduct .btnAddToCart:hover{
+    background-color: #a61713;
+    color: white;
+    transition: all .2s;
+}
+.productDetailInfo .rightProductDetail .btnBuyProduct .btnOrderNow{
+    border: .5px solid #a61713;
+    background: #a61713;
+    padding: 15px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.productDetailInfo .rightProductDetail .btnBuyProduct .btnOrderNow:hover{
+    opacity: .9;
+}
+/* Hết CSS phần thông tin của sản phẩm */
+
+/* CSS phần thông tin shop */
+.productDetailInfo .shopInfoContainer{
+    padding: 20px;
+    margin-top: 15px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.productDetailInfo .shopInfoContainer .shopInfo{
+    display: flex;
+    border-right: .5px solid #efefef;
+}
+.productDetailInfo .shopInfoContainer .shopInfo img{
+    width: 78px;
+    height: 78px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .5px solid #555555a8;
+}
+.productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo{
+    margin-left: 20px;
+    margin-right: 80px;
+}
+.productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo .shopName{
+    font-weight: 400;
+    color: black;
+    font-size: 17px;
+    display: grid;
+    align-items: start;
+    height: 50%;
+}
+.productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo .btnWatchShopContainer{
+    display: grid;
+    align-items: center;
+    height: 50%;
+}
+.productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo .btnWatchShop{
+    background-color: white;
+    padding: 10px 15px;
+    color: #555;
+    border: .5px solid #555555a8;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all .2s;
+}
+.productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo .btnWatchShop:hover{
+    background-color: #f5f5f5;
+}
+.productDetailInfo .shopInfoContainer .shopNumeral{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.productDetailInfo .shopInfoContainer .shopNumeral span{
+    display: block;
+}
+.productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralRating{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    color: #555;
+    font-weight: 400;
+    font-size: 14px;
+    padding-right: 20px;
+}
+.productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralProduct{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    color: #555;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralJoin{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    color: #555;
+    font-weight: 400;
+    font-size: 14px;
+    padding-right: 20px;
+}
+.productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralFollowers{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    color: #555;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 20px;
+}
+/* Hết CSS phần thông tin shop */
+
+/* CSS phần mô tả sản phẩm */
+.productDetailInfo .productDescriptionContainer{
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: grid;
+    align-items: start;
+}
+.productDetailInfo .productDescriptionContainer .titleProductDescription{
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 5px 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    border-radius: 4px;
+}
+.productDetailInfo .productDescriptionContainer .productDescriptionDetail{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}  
+.productDetailInfo .productDescriptionContainer .productDescriptionDetail .titleProductDescriptionDetail{
+    width: 15%; 
+    color: rgba(0,0,0,.4); 
+    font-weight: 400; 
+    font-size: 16px;
+}
+.productDetailInfo .productDescriptionContainer .productDescriptionDetail span{
+    display: block;
+    width: 85%;
+    margin: 8px 0px;
+    color: #111;
+    font-weight: 300;
+    font-size: 14px;
+}
+.productDetailInfo .productDescriptionContainer .productDescription{
+    padding: 10px 20px;
+}
+.productDetailInfo .productDescriptionContainer .productDescription p{
+    color: #222;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2;
+    margin: 0px;
+}
+/* Hết CSS phần mô tả sản phẩm */
+
+/* CSS Phần đánh giá / bình luận sản phẩm */
+.productDetailInfo .productRatingContainer{
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: grid;
+}
+.productDetailInfo .productRatingContainer .titleProductRating{
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 5px 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    border-radius: 4px;
+    width: 100%;
+    /* display: block; */
+
+}
+.productDetailInfo .productRatingContainer .productCommentContainer{
+    padding: 15px;
+    /* height: 1300px;
+    overflow-x: hidden;
+    overflow-y: auto; */
+    scroll-behavior: smooth;
+}
+/* width */
+.productDetailInfo .productRatingContainer .productCommentContainer::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 4px;
+}
+/* Track */
+.productDetailInfo .productRatingContainer .productCommentContainer::-webkit-scrollbar-track {
+    background: none;
+}
+/* Handle */
+.productDetailInfo .productRatingContainer .productCommentContainer::-webkit-scrollbar-thumb {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+/* Handle on hover */
+.productDetailInfo .productRatingContainer .productCommentContainer::-webkit-scrollbar-thumb:hover {
+    background: #efefef;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment{
+    display: grid;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(0,0,0,.09);
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .topOfProductComment{
+    display: flex;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .topOfProductComment .avatarOfProductComment{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .topOfProductComment img{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .5px solid #555555a8;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .topOfProductComment .userOfProductComment{
+    width: 95%;
+    display: grid;
+    color: #111;
+    font-weight: 400;
+    font-size: 13px;
+    align-items: center;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .contentOfProductComment{
+    display: flex;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .contentOfProductComment .textContentOfProductComment{
+    width: 95%;
+    padding: 10px 0px;
+    font-weight: 400;
+    color: black;
+    font-size: 15px;
+    text-wrap: wrap;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .contentOfProductComment .leftOfContentProductComment{
+    width: 5%;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .bottomOfProductComment{
+    display: flex;
+    flex-wrap: wrap;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .bottomOfProductComment .leftOfBottomProductComment{
+    width: 5%;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .bottomOfProductComment .mediaContentOfProductComment{
+    /* width: 95%; */
+    margin-left: -5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.productDetailInfo .productRatingContainer .productCommentContainer .productComment .bottomOfProductComment .mediaContentOfProductComment img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Phần pagination */
+.productRatingContainer .pagination{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+.productRatingContainer .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.productRatingContainer .pagination a.active {
+    background-color: #a61713;
+    color: white;
+}
+.productRatingContainer .pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+/* Hết CSS Phần đánh giá / bình luận sản phẩm */
+
+/* CSS Phần sản phẩm khác của shop */
+.productDetailInfo .otherProductOfShopContainer{
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: grid;
+}
+.productDetailInfo .otherProductOfShopContainer .topOfOtherProduct{
+    display: flex;
+    justify-content: space-between;
+}
+.productDetailInfo .otherProductOfShopContainer .titleOtherProductOfShop{
+    /* background-color: #f5f5f5; */
+    padding: 15px;
+    /* margin: 5px 5px; */
+    margin: 5px 0px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    border-radius: 4px;
+    /* width: 100%; */
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct{
+    
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct a{
+    text-decoration: none;
+    color: #111;
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct a:hover{
+    text-decoration: underline;
+    color: #a61713;
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct .btnMoveOtherProductContainer{
+    margin: 0px 5px;
+    display: flex;
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct .btnMoveOtherProductContainer button{
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: black;
+    background-color: #0000001c;
+    cursor: pointer;
+    margin: 0px 3px;
+}
+.productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct .btnMoveOtherProductContainer button:hover{
+    background-color: #3d3d3d1c;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0;
+    /* padding: 5px; */
+    scroll-snap-type: x;
+    scroll-behavior: smooth;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer{
+    padding: 5px;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer button{
+    border: .5px solid #0000001c;
+    /* padding: 10px; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 15px 5px; */
+    position: relative;
+    background-color: white;
+    padding: 0;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop:hover{
+    border: .5px solid #a61713;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop span{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    padding: 5px;
+    margin: 3px 0px;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop .otherProductOfShopSaleTag{
+    background-color: #feeeeac8;
+    /* color: orangered; */
+    color: #a61713;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    border-radius: 0px 5px 0px 0px;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop .otherProductOfShopPriceSale{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop .otherProductOfShopPriceSale .otherProductOfShopPrice{
+    /* color: orangered; */
+    color: #a61713;
+    font-weight: 300;
+    font-size: 15px;
+}
+.productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop .otherProductOfShopPriceSale .otherProductOfShopSold{
+    font-weight: 300;
+    color: black;
+    font-size: 12px;
+}
+/* Hết CSS phần sản phẩm khác của shop */
+
+/* CSS Phần sản phẩm liên quan */
+.productDetailInfo .relatedProductOfShopContainer{
+    padding: 20px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: grid;
+}
+.productDetailInfo .relatedProductOfShopContainer .topOfRelatedProduct{
+    display: flex;
+    justify-content: space-between;
+}
+.productDetailInfo .relatedProductOfShopContainer .titleRelatedProductOfShop{
+    /* background-color: #f5f5f5; */
+    padding: 15px;
+    /* margin: 5px 5px; */
+    margin: 5px 0px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    border-radius: 4px;
+    /* width: 100%; */
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct{
+    
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct a{
+    text-decoration: none;
+    color: #111;
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct a:hover{
+    text-decoration: underline;
+    color: #a61713;
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct .btnMoveRelatedProductContainer{
+    margin: 0px 5px;
+    display: flex;
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct .btnMoveRelatedProductContainer button{
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: black;
+    background-color: #0000001c;
+    cursor: pointer;
+    margin: 0px 3px;
+}
+.productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct .btnMoveRelatedProductContainer button:hover{
+    background-color: #3d3d3d1c;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0;
+    /* padding: 5px; */
+    scroll-snap-type: x;
+    scroll-behavior: smooth;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer{
+    padding: 5px;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer button{
+    border: .5px solid #0000001c;
+    /* padding: 10px; */
+    display: grid;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 15px 5px; */
+    position: relative;
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop:hover{
+    border: .5px solid #a61713;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .imgContainer{
+    /* height: 60%; */
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop span{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    padding: 5px;
+    margin: 3px 0px;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .relatedProductOfShopSaleTag{
+    background-color: #feeeeac8;
+    /* color: orangered; */
+    color: #a61713;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    border-radius: 0px 5px 0px 0px;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .relatedProductOfShopPriceSale{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .relatedProductOfShopPriceSale .relatedProductOfShopPrice{
+    /* color: orangered; */
+    color: #a61713;
+    font-weight: 300;
+    font-size: 15px;
+}
+.productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .relatedProductOfShopPriceSale .relatedProductOfShopSold{
+    font-weight: 300;
+    color: black;
+    font-size: 12px;
+}
+.relatedProductOfShopRating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+/* Hết CSS Phần sản phẩm liên quan */
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .productDetailInfo{
+        /* margin-top: 60px; */
+    }
+    .productDetailInfo .productInfoContainer{ 
+        display: grid;
+        padding: 0;
+        margin-top: 5px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .productDetailInfo .leftProductDetail{
+        width: 100%;
+    }
+    .productDetailInfo .rightProductDetail{
+        padding: 10px;
+        width: 100%;
+        border-top: .5px solid gainsboro;
+    }
+    .productDetailInfo .rightProductDetail .btnBuyProduct{
+        display: flex;
+        width: 100%;
+    }
+    .productDetailInfo .rightProductDetail .btnBuyProduct button{
+        width: 100%;
+    }
+    /* Phần đường dẫn điều hướng */
+    .productDetailInfo .breadcrumbContainer{
+        /* padding: 10px; */
+        margin-top: 0px;
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    /* Hết phần đường dẫn điều hướng */
+    /* Phần thông tin của shop */
+    .productDetailInfo .shopInfoContainer{
+        padding: 10px;
+        padding-top: 25px;
+        margin-top: 0px;
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .productDetailInfo .shopInfoContainer .shopInfo img{
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 50%;
+        object-fit: cover;
+        border: .5px solid #555555a8;
+    }
+    .productDetailInfo .shopInfoContainer .shopInfo .rightShopInfo .btnWatchShop{
+        background-color: white;
+        padding: 10px 8px;
+        color: #555;
+        border: .5px solid #555555a8;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 10px;
+        transition: all .2s;
+    }
+    .productDetailInfo .shopInfoContainer .shopNumeral span{
+        display: block;
+        font-size: 12px;
+    }
+    .productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralRating{
+        padding-right: 5px;
+    }
+    .productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralProduct{
+        padding-left: 5px;
+    }
+    .productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralJoin{
+        padding-right: 5px;
+    }
+    .productDetailInfo .shopInfoContainer .shopNumeral .shopNumeralFollowers{
+        padding-left: 5px;
+    }
+    /* Hết phần thông tin của Shop */
+    /* Phần mô tả sản phẩm */
+    .productDetailInfo .productDescriptionContainer{
+        margin-top: 5px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .productDetailInfo .productDescriptionContainer .productDescriptionDetail .titleProductDescriptionDetail{
+        width: 20%;
+    }
+    .productDetailInfo .productDescriptionContainer .productDescriptionDetail span{
+        width: 80%;
+    }
+    /* Hết phần mô tả sản phẩm */
+    /* Phần đánh giá, bình luận sản phẩm */
+    .productDetailInfo .productRatingContainer{
+        margin-top: 5px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .productDetailInfo .productRatingContainer .productCommentContainer .productComment .topOfProductComment .avatarOfProductComment{
+        width: 18%;
+    }
+    .productDetailInfo .productRatingContainer .productCommentContainer .productComment .topOfProductComment .userOfProductComment{
+        width: 82%;
+    }
+    .productDetailInfo .productRatingContainer .productCommentContainer .productComment .contentOfProductComment .textContentOfProductComment{
+        width: 82%;
+    }
+    .productDetailInfo .productRatingContainer .productCommentContainer .productComment .contentOfProductComment .leftOfContentProductComment{
+        width: 18%;
+    }
+    .productDetailInfo .productRatingContainer .productCommentContainer .productComment .bottomOfProductComment .leftOfBottomProductComment{
+        width: 18%;
+    }
+    .productDetailInfo .productRatingContainer .productCommentContainer .productComment .bottomOfProductComment .mediaContentOfProductComment{
+        /* width: 82%; */
+    }
+    /* Hết phần đánh giá, bình luận sản phẩm */
+    /* Phần các sản phẩm khác của shop */
+    .productDetailInfo .otherProductOfShopContainer{
+        margin-top: 5px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+    .productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop .otherProductOfShopPriceSale .otherProductOfShopPrice{
+        /* color: orangered; */
+        color: #a61713;
+        font-weight: 300;
+        font-size: 15px;
+    }
+    .productDetailInfo .otherProductOfShopContainer .listOtherProductOfShop .btnOtherProductOfShopContainer .btnOtherProductOfShop .otherProductOfShopPriceSale .otherProductOfShopSold{
+        font-weight: 300;
+        color: black;
+        font-size: 8px;
+    }
+    .productDetailInfo .otherProductOfShopContainer .rightOfTopOtherProduct a{
+        text-decoration: none;
+        color: #111;
+        font-size: 14px;
+    }
+    .productDetailInfo .otherProductOfShopContainer .titleOtherProductOfShop{
+        /* background-color: #f5f5f5; */
+        padding: 15px;
+        /* margin: 5px 5px; */
+        margin: 5px 0px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #111;
+        border-radius: 4px;
+        /* width: 100%; */
+    }
+    /* Hết phần các sản phẩm khác của shop */
+    /* Phần các sản phẩm liên quan */
+    .productDetailInfo .relatedProductOfShopContainer{
+        margin-top: 5px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+    .productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .relatedProductOfShopPriceSale .relatedProductOfShopPrice{
+        /* color: orangered; */
+        color: #a61713;
+        font-weight: 300;
+        font-size: 15px;
+    }
+    .productDetailInfo .relatedProductOfShopContainer .listRelatedProductOfShop .btnRelatedProductOfShopContainer .btnRelatedProductOfShop .relatedProductOfShopPriceSale .relatedProductOfShopSold{
+        font-weight: 300;
+        color: black;
+        font-size: 8px;
+    }
+    .productDetailInfo .relatedProductOfShopContainer .rightOfTopRelatedProduct a{
+        text-decoration: none;
+        color: #111;
+        font-size: 14px;
+    }
+    .productDetailInfo .relatedProductOfShopContainer .titleRelatedProductOfShop{
+        /* background-color: #f5f5f5; */
+        padding: 15px;
+        /* margin: 5px 5px; */
+        margin: 5px 0px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #111;
+        border-radius: 4px;
+        /* width: 100%; */
+    }
+    /* Hết phần các sản phẩm liên quan */
+    #backHeaderID{
+        width: 100%;
+        height: 60px;
+    }
+}

@@ -1,0 +1,144 @@
+#backHeaderID{
+    width: 100%;
+    height: 131px;
+}
+.profileUserContainer{
+    margin: 0;
+}
+.profileUserContainer .profileUser{
+    padding: 10px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: flex;
+}
+.profileUserContainer .profileUser .leftProfileUser{
+    width: 15%;
+}
+.profileUserContainer .profileUser .leftProfileUser .infoCard{
+    display: flex;
+    padding: 20px 0px;
+    padding-top: 0px;
+    border-bottom: .5px solid #efefef;
+}
+.profileUserContainer .profileUser .leftProfileUser .infoCard img{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+    border: .5px solid #efefef;
+}
+.profileUserContainer .profileUser .leftProfileUser .infoCard .right{
+    display: grid;
+    align-items: center;
+}
+.profileUserContainer .profileUser .leftProfileUser .infoCard .right span{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+.profileUserContainer .profileUser .leftProfileUser .menu{
+    display: grid;
+    padding-top: 20px;
+}
+.profileUserContainer .profileUser .leftProfileUser .menu button{
+    margin: 3px 0px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    display: flex;
+    padding: 0px;
+    cursor: pointer;
+    padding:  10px;
+    border-radius: 4px;
+    transition: all .2s;
+    color: black;
+}
+.profileUserContainer .profileUser .leftProfileUser .menu button:hover{
+    background-color: #efefef;
+}
+.profileUserContainer .profileUser .leftProfileUser .menu button span{
+    display: block;
+    align-items: center;
+    justify-items: left;
+    font-size: 14px;
+    width: 80%;
+}
+.profileUserContainer .profileUser .leftProfileUser .menu button i{
+    margin-right: 5px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    width: 20%;
+}
+.profileUserContainer .profileUser .rightProfileUser{
+    width: 85%;
+}
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    #backHeaderID{
+        width: 100%;
+        height: 60px;
+    }
+    .profileUserContainer .profileUser{
+        padding: 5px;
+        margin-top: 0px;
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: none;
+        display: grid;
+    }
+    .profileUserContainer .profileUser .leftProfileUser{
+        width: 100%;
+        border-bottom: .5px solid #efefef;
+    }
+    .profileUserContainer .profileUser .rightProfileUser{
+        width: 100%;
+    }
+    .profileUserContainer .profileUser .leftProfileUser .infoCard{
+        display: flex;
+        padding: 0px 0px;
+        padding-top: 0px;
+        border-bottom: none;
+    }
+    .profileUserContainer .profileUser .leftProfileUser .menu{
+        display: flex;
+        padding-top: 5px;
+    }
+    .profileUserContainer .profileUser .leftProfileUser .menu button{
+        margin: 3px 0px;
+        border: none;
+        background: transparent;
+        text-align: left;
+        display: flex;
+        padding: 0px;
+        cursor: pointer;
+        padding:  10px;
+        border-radius: 4px;
+        transition: all .2s;
+        width: 100%;
+        color: black;
+    }
+}

@@ -1,0 +1,357 @@
+#backHeaderID{
+    width: 100%;
+    height: 131px;
+}
+/* Product List */
+.productListContainer{
+    margin: 0;
+    /* margin-top: 102px; */
+}
+.productListContainer .productListMain{
+    display: flex;
+    padding-top: 20px;
+}
+/* phần bên trái */
+.productListContainer .productListMain .leftOfProductList{
+    width: 15%;
+    padding: 15px;
+    padding-top: 20px;
+    position: relative;
+    transform: translateX(0px);
+}   
+.productListContainer .productListMain .leftOfProductList .titleFilterProductList{
+    /* padding: 10px; */
+    /* padding-bottom: 20px; */
+}
+.productListContainer .productListMain .leftOfProductList .titleFilterProductList span{
+    color: #222;
+    font-weight: 500;
+    font-size: 16px;
+}
+.productListContainer .productListMain .leftOfProductList .filterBasePlace{
+    color: #111;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0,0,0,.09);
+    font-weight: 400;
+    font-size: 14px;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBasePlace .filterBasePlaceCheckbox{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBasePlace input{
+    color: #333;
+    margin-right: 5px;
+    cursor: pointer;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseBrand{
+    color: #111;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0,0,0,.09);
+    font-weight: 400;
+    font-size: 14px;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseBrand .filterBaseBrandCheckbox{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseBrand input{
+    color: #333;
+    margin-right: 5px;
+    cursor: pointer;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseRating{
+    color: #111;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0,0,0,.09);
+    font-weight: 400;
+    font-size: 14px;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseRating .filterBaseRatingChoice{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 5px 0px;
+    display: block;
+    transition: all .2s;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseRating .filterBaseRatingChoice:hover{
+    background-color: #dadada;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseRating .checked{
+    color: #a61713;
+}   
+.productListContainer .productListMain .leftOfProductList .filterBaseRating button{
+    
+}   
+.productListContainer .productListMain .leftOfProductList .btnActiveFilter{
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+}   
+.productListContainer .productListMain .leftOfProductList .btnActiveFilter button{
+    border: .5px solid #a61713;
+    background: #a61713;
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    width: 100%;
+}   
+.productListContainer .productListMain .leftOfProductList .btnActiveFilter button:hover{
+    background-color: #971612;
+}   
+.productListContainer .productListMain .leftOfProductList .btnCloseFilterProductList{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}   
+.productListContainer .productListMain .leftOfProductList .btnCloseFilterProductList button{
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    color: black;
+    border: .5px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+}   
+/* hết phần bên trái */
+/* phần bên phải */
+.productListContainer .productListMain .rightOfProductList{
+    /* display: grid; */
+    width: 85%;
+}
+.listSuggest{
+    margin: 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+    /* justify-content: space-evenly; */
+}
+.listSuggest .btnSuggestItemContainer{
+    padding: 5px;
+}
+.listSuggest .btnSuggestItem{
+    border: .5px solid #0000001c;
+    /* padding: 10px; */
+    display: grid;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 15px 5px; */
+    position: relative;
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.listSuggest .btnSuggestItem .suggestItemSaleTag{
+    background-color: #feeeeac8;
+    /* color: orangered; */
+    color: #a61713;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    border-radius: 0px 5px 0px 0px;
+}
+.listSuggest .btnSuggestItem:hover{
+    /* border: .5px solid orangered; */
+    border: .5px solid #a61713;
+}
+.listSuggest .btnSuggestItem .suggestItemPriceSale{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.listSuggest .btnSuggestItem .suggestItemPriceSale .suggestItemPrice{
+    /* color: orangered; */
+    color: #a61713;
+    font-weight: 300;
+    font-size: 15px;
+}
+.listSuggest .btnSuggestItem .suggestItemPriceSale .suggestItemSold{
+    font-weight: 300;
+    color: black;
+    font-size: 12px;
+}
+.listSuggest .btnSuggestItem img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.listSuggest .btnSuggestItem span{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    padding: 5px;
+    margin: 3px 0px;
+}
+.listSuggest .btnSuggestItem .ratingOfProduct{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+.listSuggest .btnSuggestItem .ratingOfProduct .starRatingOfProduct .checked{ 
+    color: #a61713;
+    font-weight: 600;
+}
+.listSuggest .btnSuggestItem .ratingOfProduct .starRatingOfProductBox{
+   display: flex;
+   align-items: center;
+}
+.productListContainer .productListMain .rightOfProductList .btnOpenFilterProductList {
+    display: none;
+}
+/* Phần pagination */
+.productListContainer .productListMain .rightOfProductList .pagination{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+.productListContainer .productListMain .rightOfProductList .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border-radius: 4px;
+}
+.productListContainer .productListMain .rightOfProductList .pagination a.active {
+    background-color: #a61713;
+    color: white;
+}
+.productListContainer .productListMain .rightOfProductList .pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+.filterByPrice{
+    margin: 0;
+    padding: 15px;
+    background-color: #efefef;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: fit-content;
+}
+.filterByPrice span{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin: 0px 5px;
+}
+.filterByPrice form button{
+    border: .5px solid #a61713;
+    background: #a61713;
+    padding: 5px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.filterByPrice form button:hover{
+    background-color: #971612;
+}
+.filterByPrice select{
+    margin: 0 5px;
+    padding: 5px;
+    border: .5px solid #efefef;
+    background-color: #fff;
+    color: #111;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* hết phần bên phải */
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .productListContainer{
+        /* margin-top: 60px; */
+    }
+    .productListContainer .productListMain{
+        display: grid;
+        position: relative;
+    }
+    .productListContainer .productListMain .leftOfProductList{
+        width: 75%;
+        height: 100%;
+        padding: 15px;
+        padding-top: 20px;
+        position: absolute;
+        z-index: 99;
+        background: white;
+        transform: translateX(-500px);
+        transition: all .5s;
+    }   
+    .productListContainer .productListMain .rightOfProductList{
+        width: 100%;
+        padding: 5px;
+        padding-top: 0px;
+    }   
+    .productListContainer .productListMain .rightOfProductList .listSuggest{
+        margin: 0;
+        padding: 0px;
+        background-color: #f5f5f5;
+        justify-content: space-evenly;
+    }
+    .productListContainer .productListMain .rightOfProductList .btnOpenFilterProductList {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .productListContainer .productListMain .rightOfProductList .btnOpenFilterProductList button{
+        border: .5px solid #555;
+        background: transparent;
+        padding: 5px;
+        color: black;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 400;
+    }
+    .productListContainer .productListMain .rightOfProductList .btnOpenFilterProductList button:hover{
+        background-color: #dddddd41;
+    }
+    .productListContainer .productListMain .leftOfProductList .btnCloseFilterProductList{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }   
+    .productListContainer .productListMain .leftOfProductList .btnCloseFilterProductList button{
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        color: black;
+        border: .5px solid transparent;
+        font-size: 16px;
+        cursor: pointer;
+    }   
+    #backHeaderID{
+        width: 100%;
+        height: 60px;
+    }
+}

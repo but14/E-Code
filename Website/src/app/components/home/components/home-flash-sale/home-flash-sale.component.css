@@ -1,0 +1,182 @@
+/* CSS Flash Sale */
+.flashSale{
+    margin: 0;
+    margin-top: 20px;
+}
+.flashSale .col{
+    background-color: white;
+    border-radius: 4px;
+    padding: 0;
+}
+.flashSale .titleFlashSale{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 5px;
+}
+.flashSale .titleFlashSale .leftTitleFlashSale{
+    display: flex;
+    align-items: center;
+}
+.flashSale .titleFlashSale .rightTitleFlashSale{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flashSale .titleFlashSale .rightTitleFlashSale .btnMoveFlashSaleContainer{
+    margin: 0px 5px;
+    display: flex;
+}
+.flashSale .titleFlashSale .rightTitleFlashSale .btnMoveFlashSaleContainer button{
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: black;
+    background-color: #0000001c;
+    cursor: pointer;
+    margin: 0px 3px;
+}
+.flashSale .titleFlashSale .rightTitleFlashSale .btnMoveFlashSaleContainer button:hover{
+    background-color: #3d3d3d1c;
+}
+.flashSale .titleFlashSale .leftTitleFlashSale img{
+    width: 130px;
+}
+.flashSale .titleFlashSale a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    /* color: #a61713; */
+}
+.flashSale .titleFlashSale a:hover{
+    text-decoration: underline;
+    color: #a61713;
+}
+.flashSale .listFlashSale{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0;
+    padding: 5px;
+    scroll-snap-type: x;
+    scroll-behavior: smooth;
+}
+.flashSale .listFlashSale .btnFlashSale{
+    border: none;
+    display: grid;
+    align-items: center;
+    /* margin: 3px; */
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.flashSale .listFlashSale .btnFlashSale:hover{
+    background-color: #0000001c;
+    border-radius: 8px;
+}
+.flashSale .listFlashSale .btnFlashSale img{
+    width: 100%;
+    margin: 3px 0px;
+    margin-top: 0px;
+    border-radius: 8px;
+}
+.flashSale .listFlashSale .btnFlashSale .iconShopeeMall{
+    position: absolute;
+    width: 28px;
+    top: 10px;
+    left: 5px;
+}
+.flashSale .listFlashSale .btnFlashSale .iconSalePercent{
+    position: absolute;
+    width: 28px;
+    top: 5px;
+    right: 5px;
+    /* background-color: #ffe97a; */
+    background-color: #a61713;
+    /* color: orangered; */
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 3px 2px;
+    border-radius: 5px;
+}
+.flashSale .listFlashSale .btnFlashSale span{
+    font-weight: 400;
+    /* color: orangered; */
+    color: #a61713;
+    font-size: 17px;
+    margin: 3px 0px;
+}
+
+/* Hết CSS Flash Sale */
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    /* Header ở điện thoại */
+    .header .search{
+        width: 65%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        padding: 10px;
+    }
+    .header .logo{
+        width: 35%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .header .rightHeader{
+        /* width: 15%; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    /* News */
+    .news .col{
+        padding: 30px 10px;
+    }
+    .news{
+        margin-top: 62px;
+    }
+    /*  */
+    .flashSale{
+        margin: 0;
+        margin-top: 0px;
+    }
+    .flashSale .col{
+        background-color: white;
+        border-radius: 0px;
+        padding: 0;
+    }
+}

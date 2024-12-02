@@ -1,0 +1,37 @@
+<div class="row suggest">  
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12">
+        <div class="titleSuggest">
+            <span>GỢI Ý HÔM NAY</span>
+        </div>
+        <div class="row listSuggest">
+            <div class="col l-2 m-3 c-6 btnSuggestItemContainer" *ngFor="let product of list_product">
+                <button type="button" class="btnSuggestItem" routerLink="/product-detail/{{product.product_slug}}" [queryParams]="{ idProduct : product._id }">
+                    <div class="suggestItemSaleTag">
+                        -50%
+                    </div>
+                    <img [src]="product.product_imgs[0].link" alt="">
+                    <span class="productName">{{ product.product_name }}</span>
+                    <div class="suggestItemPriceSale">
+                        <span class="suggestItemPrice">{{product.product_supp_price | number : '1.0-0' }} đ</span>
+                    </div>
+                    <div class="ratingOfProduct">
+                        <div class="starRatingOfProductBox">
+                            <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 1" style="color: red;"></i>
+                            <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 2" style="color: red;"></i>
+                            <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 3" style="color: red;"></i>
+                            <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 4" style="color: red;"></i>
+                            <i class="fa-solid fa-star" *ngIf="product.product_avg_rating >= 5" style="color: red;"></i>
+                        </div>
+                        <span class="suggestItemSold" style="display: flex; align-items: center;">Đã bán {{product.product_sold_quantity}}</span>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+        <div class="btnMoreSuggestContainer">
+            <button>
+                Xem Thêm
+            </button>
+        </div>
+    </div>
+</div>

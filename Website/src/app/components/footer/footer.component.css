@@ -1,0 +1,221 @@
+/* CSS Footer */
+.footer{
+    margin: 0;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-top: 5px solid #a61713;;
+}
+.footer .col{
+    /* border-radius: 4px; */
+    padding: 0;
+}
+.footer .topFooter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 10px;
+    border-bottom: .5px solid #0000001c;
+    padding-bottom: 30px;
+}
+.footer .customerCareContainer{
+    display: grid;
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .customerCareContainer span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer .customerCareContainer a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    margin: 5px 0px;
+}
+.footer .customerCareContainer a:hover{
+    color: #a61713;;
+}
+.footer .aboutShopee{
+    display: grid;
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .aboutShopee span{
+    font-size: 13px;
+    font-weight: 600;
+}
+.footer .aboutShopee a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+}
+.footer .aboutShopee a:hover{
+    color: #a61713;
+}
+.footer .payAndShippingInfo{
+    /* display: grid; */
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .payAndShippingInfo span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+}
+.footer .payAndShippingInfo a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    
+}
+.footer .payAndShippingInfo a:hover{
+    color: #a61713;
+}
+.footer .payInfo{
+    
+}
+.footer .payInfo .payInfoImages{
+    margin: 0;
+}
+.footer .payInfo .payInfoImages img{
+    width: 25%;
+    height: 35px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0px 2px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.footer .shippingInfo{
+    
+}
+.footer .shippingInfo span{
+    margin: 15px 0px;
+    display: block;
+}
+.footer .shippingInfo .shippingInfoImages{
+    margin: 0;
+}
+.footer .shippingInfo .shippingInfoImages img{
+    width: 25%;
+    height: 35px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0px 2px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.footer .otherPlatform{
+    /* display: grid; */
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .otherPlatform .otherPlatformLink{
+    display: grid;
+}
+.footer .otherPlatform span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+.footer .otherPlatform a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    margin: 5px 0px;
+}
+.footer .otherPlatform a:hover{
+    /* color: orangered; */
+    color: #a61713;
+}
+.footer .downloadAppShopee{
+    /* display: grid;    */
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .downloadAppShopee span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+.footer .downloadAppShopee a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    
+}
+.footer .downloadAppShopee .linkDownload{
+    display: grid;
+    justify-content: left;
+    align-items: center;
+}
+.footer .downloadAppShopee img{
+    width: 100%;
+    height: 35px;
+    padding: 3px;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.footer .downloadAppShopee a:hover{
+    color: #a61713;
+}
+.footer .midFooter{
+    text-align: center;
+    padding: 20px;
+}   
+.footer .midFooter span{
+    font-size: 15px;
+    color: dimgray;
+    font-weight: 300;
+}
+/* Hết CSS Footer */
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .footer{
+        margin: 0;
+        margin-top: 30px;
+        background-color: #ffffff;
+        border-top: 5px solid #a61713;
+        display: none;
+    }
+}

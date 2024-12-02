@@ -1,0 +1,55 @@
+<div class="detailOrderContainer">
+    <button class="btnComeBackOrderList" onclick="history.back()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div class="detailOrder">
+        <span class="titleDetailOrder">Thông tin đơn hàng : </span>
+        <!-- Order -->
+        <div class="order" *ngIf="detail_order._id else other_content">
+            <div class="buyerName" style="padding-top: 15px;">
+                <span>Mã hóa đơn: <span style="color: #222; font-weight: 400;">{{detail_order._id}}</span></span>
+            </div>
+            <div class="buyerName">
+                <span>Tên người nhận: <span style="color: #222; font-weight: 400;">{{detail_order.order_buyer}}</span></span>
+            </div>
+            <div class="buyerAddress">
+                <span>Địa chỉ: <span style="color: #222; font-weight: 400;">{{detail_order.order_address}}</span></span>
+            </div>
+            <div class="productList">
+                <span style="font-size: 20px; font-weight: 500; color: #111; padding: 3px 0px;">Sản phẩm</span>
+                <div class="product" *ngFor="let product of detail_order.order_details">
+                    <div class="top">
+                        <span class="productID">Mã sản phẩm: <span style="color: #222; font-weight: 400;">{{product.product_id}}</span></span>
+                        <span class="variantID">Mã biến thể: <span style="color: #222; font-weight: 400;">{{product.variant_id}}</span></span>
+                        <span class="quantity">Số lượng đặt: <span style="color: #222; font-weight: 400;">{{product.quantity}}</span></span>
+                    </div>
+                    <div class="bottom">
+                        <span class="unitPrice">Giá: <span style="color: #222; font-weight: 400; font-size: 18px;">{{product.unit_price | number : '1.0-0'}} đ</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="status">
+                    <ng-container *ngIf="detail_order.order_status == 'Successfull'">
+                        <span>Trạng thái đơn hàng: <span style="color: #27ae60; font-weight: 600; font-size: 20px;">{{detail_order.order_status}}</span></span>
+                    </ng-container>
+                    <ng-container *ngIf="detail_order.order_status == 'Processing'">
+                        <span>Trạng thái đơn hàng: <span style="color: #555; font-weight: 600; font-size: 20px;">{{detail_order.order_status}}</span></span>
+                    </ng-container>
+                    <span>Thời gian tạo đơn: <span style="color: #222; font-weight: 400;">{{ format_date(detail_order.createdAt)}}</span></span>
+                </div>
+                <div class="payment">  
+                    <span>Total Cost: <span style="color: #222; font-weight: 400; font-size: 18px;">{{detail_order.order_total_cost | number : '1.0-0'}}</span> đ</span>
+                    <span>Shipping Cost: <span style="color: #222; font-weight: 400; font-size: 18px;">{{detail_order.order_shipping_cost | number : '1.0-0'}}</span> đ</span>
+                    <span>Phí giao hàng: <span style="color: #222; font-weight: 400; font-size: 18px;">{{detail_order.order_payment_cost | number : '1.0-0'}}</span> đ</span>
+                </div>
+            </div>
+            <div class="bottom">
+                <button class="btnDetailOrder" onclick="history.back()">Trở về</button>
+            </div>
+        </div>
+        
+        <ng-template #other_content>Không có thông tin về đơn hàng này.</ng-template>
+
+    </div>
+</div>

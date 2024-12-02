@@ -1,0 +1,131 @@
+<div class="row">
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 containerAddress">
+        <div class="header">Thông tin nhận hàng</div>
+        <ng-container *ngIf="check == true else elseBlock">
+            <div class="address">
+                <div class="name">{{infor_shipping.name}}</div>
+                <div class="name">{{infor_shipping.phone}}</div>
+                <div class="detail">{{infor_shipping.address}}</div>
+                <button id="xxxx" type="button" (click)="change_status()">THAY ĐỔI</button>
+            </div>
+        </ng-container>
+        <ng-template #elseBlock>
+            <form >
+                <input type="text"  placeholder="Tên nhận hàng" name="name" required #name>
+                <input type="text"  placeholder="Số điện thoại" name="phone" required #phone/>
+                <input type="text"  placeholder="Địa chỉ" name="address" required #address/>
+                <button type="button" (click)="update_location(name.value,phone.value,address.value)">Lưu</button>
+            </form>
+        </ng-template>
+
+    </div>
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 container">
+    <div class="header">
+    <h2>
+        Sản phẩm
+    </h2>
+    <div class="price">
+        Đơn giá
+    </div>
+    <div class="quantity">
+        Số lượng
+    </div>
+    <div class="total">
+        Thành tiền
+    </div>
+    </div>
+    <ng-container *ngIf="product_cart.length > 0 else elseBlock">
+        <div class="product" *ngFor="let item of product_cart">
+            <div class="product-details">
+                <img alt="" height="60" [src]="baseUrl + item.product.product_variants[0].variant_imgs[0].link " width="60"/>
+                <div class="info">
+                <p>
+                {{ item.product.product_name}}
+                </p>
+                <p class="type">
+                Loại: {{item.product.product_variants[0].variant_name}}
+                </p>
+                </div>
+            </div>
+            <div class="product-price">₫ {{item.product.product_variants[0].price | number : '1.0-0'}}</div>
+            <div class="product-quantity">{{item.quantity}}</div>
+            <div class="product-total"> ₫ {{item.quantity * item.product.product_variants[0].price | number : '1.0-0'}}</div>
+        </div>
+    </ng-container>
+    <ng-template #elseBlock>other content here...</ng-template>
+
+    <div class="insurance"> <input type="checkbox"/> <p>
+        Bảo hiểm Thiết bị điện tử
+    </p>
+    <p class="price">
+       
+    </p>
+    </div>
+    <div class="message">
+    <input placeholder="Lưu ý cho Người bán..." type="text"/>
+    </div>
+    <div class="shipping">
+    <div class="method">
+        Phương thức vận chuyển: Nhanh
+    </div>
+    <div class="change">
+        Thay Đổi
+    </div>
+    <div class="price">
+    </div>
+    </div>
+    <div class="total">
+    <div class="label">
+        Tổng số tiền ({{product_cart.length}} sản phẩm):
+    </div>
+    <div class="amount">
+        ₫ {{product_amount |  number : '1.0-0'}}
+    </div>
+    </div>
+    </div>
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 container1">
+      <div class="header">Phương thức thanh toán</div>
+      <div class="payment-method">
+          <div>Thanh toán khi nhận hàng</div>
+          <button type="button" (click)="createPayment()">Tiền mặt</button>
+          <button type="button" (click)="createPayment()">VnPay</button>
+      </div>
+      <div class="summary">
+        <div class="summary-item">
+            <div>Tổng tiền hàng</div>
+            <div> ₫ {{product_amount |  number : '1.0-0'}}</div>
+        </div>
+        <div class="summary-item">
+            <div>Tổng tiền phí vận chuyển</div>
+            <div> ₫ {{ order_shipping_cost |  number : '1.0-0'}}</div>
+        </div>
+        <div class="summary-item">
+            <div>Tổng thanh toán</div>
+            <div> ₫ {{product_amount + order_shipping_cost |  number : '1.0-0'}}</div>
+        </div>
+      </div>
+      <div class="note">
+            Nhấn "Đặt hàng" đồng nghĩa với việc bạn đồng ý tuân theo <a href="#">Điều khoản WolfTechE</a>
+      </div>
+      <div class="order-button">
+          <button id="xxx" routerLink="/review" (click)="create_order()">Đặt hàng</button>
+      </div>
+    </div>
+</div>
+
+<ng-container *ngIf="isAvailable == true ">
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 containerAddress">
+        <div class="header"><b>XIN HÃY KIỂM TRA LẠI THÔNG TIN ĐƠN HÀNG CỦA BẠN -------------- NHẤN TRANG CHỦ ĐỂ TIẾP TỤC MUA HÀNG</b></div>
+            <div class="address">
+                <div class="name"></div>
+                <div class="name"></div>
+                <div class="detail"></div>
+                <button type="button" (click)="return()"> TRANG CHỦ</button>
+            </div>
+            <div class="address">
+                <div class="name"></div>
+                <div class="name"></div>
+                <div class="detail">-------------------------------------------------------------------------------------------------------------</div>
+            </div>
+    </div>
+</ng-container>

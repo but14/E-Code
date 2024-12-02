@@ -1,0 +1,23 @@
+<div class="row category">  
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12">
+        <div class="titleCategory">
+            <span>DANH MỤC</span>
+            <div class="btnMoveCategoryContainer">
+                <button id="btnMoveCategoryLeftID">
+                    <i class="fa-solid fa-caret-left"></i>
+                </button>
+                <button id="btnMoveCategoryRightID">
+                    <i class="fa-solid fa-caret-right"></i>
+                </button>
+            </div>
+        </div>
+        <div id="listCategoryID" class="row listCategory">
+            <ng-container *ngIf="parentCategories.length > 0">
+                <button (click)="search_categoryParent(category.name)" class="col l-1 m-2 c-3 btnCategory" *ngFor="let category of parentCategories">
+                    <img [src]="category.img" alt="">
+                    <span>{{category.name}}</span>
+                </button>
+            </ng-container>
+        </div>
+    </div>
+</div>

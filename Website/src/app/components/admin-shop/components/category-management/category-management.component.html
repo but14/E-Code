@@ -1,0 +1,52 @@
+<div class="categoryManagementContainer">
+    <!-- Phần tiêu đề -->
+    <div class="title">
+        <span>Quản lý loại</span>
+        <span style="color: #444; font-size: 16px; font-weight: 400;">Kiểm tra, chỉnh sửa hoặc xóa dữ liệu loại sản phẩm,...</span>
+    </div>
+    <!-- Bảng sản phẩm -->
+    <div class="categoryTable">
+        <div class="titleTable">
+            <span>Category Table</span>
+            <button class="btnAddCategory" (click)="navigate()">Thêm +</button>
+        </div>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                    <tr><td>STT</td><td>Tên</td><td>Hình</td><td>Thao tác</td></tr>
+                </thead>
+                <tbody>
+                    <!-- 1 hàng -->
+                    <ng-container *ngIf="listCategory else elseBlock">
+                        <tr *ngFor="let category of listCategory; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>{{category.category_name}}</td>
+                            <td>
+                                <img src="{{category.category_img}}" alt="nothing">
+                            </td>
+                            <td class="operationCol">
+                                <button class="btnEdit">Sửa</button>
+                                <button type="button" (click)="delete_category(category._id)" class="btnDelete">Xóa</button>
+                            </td>
+                        </tr>
+                    </ng-container>
+                    <ng-template #elseBlock>There is not category is this seller.</ng-template>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+            <button type="button" class="">&laquo;</button>
+            <button type="button" [class.active]="isActive(1)" (click)="goToPage(1)">1</button>
+            <button type="button" [class.active]="isActive(2)" (click)="goToPage(2)">2</button>
+            <button type="button" [class.active]="isActive(3)" (click)="goToPage(3)">3</button>
+            <button type="button" [class.active]="isActive(4)" (click)="goToPage(4)">4</button>
+            <button type="button" [class.active]="isActive(5)" (click)="goToPage(5)">5</button>
+            <button type="button" [class.active]="isActive(6)" (click)="goToPage(6)">6</button>
+            <button type="button" class="" >&raquo;</button>
+          </div>
+        
+    </div>
+</div>

@@ -1,0 +1,199 @@
+.addProductContainer{
+    padding: 10px;
+    padding-top: 0px;
+}
+.addProductContainer .title{
+    display: grid;
+    padding: 10px 0px;
+}
+.addProductContainer .title span{
+    display: block;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 3px 0px;
+}
+.addProductContainer .formAddProduct{
+    /* display: grid; */
+    align-items: center;
+    justify-content: left;
+    /* width: 100%; */
+}
+.addProductContainer .formAddProduct form{
+    display: grid;
+    align-items: center;
+    /* width: 50%; */
+    /* width: 100%; */
+}
+.addProductContainer .formAddProduct form .inputWrapper{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.addProductContainer .formAddProduct form .inputWrapper .detailPreviewBox{
+    display: grid;
+    align-items: center;
+    width: 60%;
+}
+.addProductContainer .formAddProduct form .inputWrapper .detailPreviewBox .btnDeleteDetail{
+    border: .5px solid #c0392b;
+    padding: 10px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c0392b;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    cursor: pointer;
+    transition: all .1s;
+}
+.addProductContainer .formAddProduct form .inputWrapper .detailPreviewBox .btnDeleteDetail:hover{
+    background-color: #c0392b;
+    color: whitesmoke;
+}
+.addProductContainer .formAddProduct form .inputWrapper .detailPreviewBox span{
+    padding: 5px;
+}
+.addProductContainer .formAddProduct form .inputWrapper .btnAddDetail{
+    border: .5px solid #27ae60;
+    padding: 10px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #27ae60;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    cursor: pointer;
+    transition: all .1s;
+}
+.addProductContainer .formAddProduct form .inputWrapper .btnAddDetail:hover{
+    background-color: #27ae60;
+    color: whitesmoke;
+}
+.addProductContainer .formAddProduct form .inputWrapper .imagePreviewBox{
+    display: flex;   
+    width: 60%;
+}
+.addProductContainer .formAddProduct form .inputWrapper .imagePreviewBox .imagePreview{
+    padding: 5px;
+    width: 20%;
+}
+.addProductContainer .formAddProduct form .inputWrapper .imagePreviewBox img{
+    border-radius: 4px;
+    width: 100%;
+}
+.addProductContainer .formAddProduct form .inputImageWrapper{
+    width: 40%;
+    display: grid;
+}
+.addProductContainer .formAddProduct form span{
+    display: block;
+    justify-content: right;
+    width: 40%;
+    color: #222;
+    font-weight: 400;
+}
+.addProductContainer .formAddProduct form input{
+    display: block;
+    justify-content: left;
+    width: 60%;
+    padding: 10px;
+    border: .5px solid#efefef;
+    border-radius: 4px;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+.addProductContainer .formAddProduct form textarea{
+    display: block;
+    justify-content: left;
+    width: 60%;
+    padding: 10px;
+    border: .5px solid#efefef;
+    border-radius: 4px;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+.addProductContainer .formAddProduct form .btnSave{
+    border: .5px solid dimgray;
+    background-color: transparent;
+    padding: 15px 5px;  
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .2s;
+    margin: 20px 0px;
+}
+.addProductContainer .formAddProduct form .btnSave:hover{
+    background-color: #efefef;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox{
+    width: 60%;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .variant{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .variant span{
+    display: block;
+    color: #222;
+    font-weight: 400;
+    font-size: 14px;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .variant img{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .variant .btnDeleteVariant{
+    border: .5px solid #c0392b;
+    padding: 10px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c0392b;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    cursor: pointer;
+    transition: all .1s;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .variant .btnDeleteVariant:hover{
+    background-color: #c0392b;
+    color: whitesmoke;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .btnAddVariant{
+    border: .5px solid #27ae60;
+    padding: 10px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #27ae60;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    cursor: pointer;
+    transition: all .1s;
+}
+.addProductContainer .formAddProduct form .inputWrapper .variantsBox .btnAddVariant:hover{
+    background-color: #27ae60;
+    color: whitesmoke;
+}
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    
+}

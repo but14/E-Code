@@ -1,0 +1,305 @@
+/* CSS Header */
+.header{
+    /* background: rgb(254,98,50);
+    background: linear-gradient(0deg, rgba(254,98,50,1) 0%, rgba(247,70,46,1) 100%); */
+    background-color: #000000e8;
+    backdrop-filter: blur(10px);
+    /* height: 115px; */
+    margin: 0;
+    /* position: fixed; */
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header .col{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.header .topOfHeaderContainer{
+    width: 100%;
+    padding: 10px 0px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .topOfHeaderContainer .left{
+    
+}
+.header .topOfHeaderContainer .left a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0px 10px;
+    border-right: .5px solid #555;
+    transition: all .2s;
+}
+.header .topOfHeaderContainer .left a:hover{
+    color: #a61713;
+}
+.header .topOfHeaderContainer .right{
+    
+}
+.header .topOfHeaderContainer .right a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0px 10px;
+    /* border-right: .5px solid #555; */
+    transition: all .2s;    
+}
+.header .topOfHeaderContainer .right a:hover{
+    color: #a61713;
+}
+.header .bottomOfHeaderContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.header .logo{
+    /* width: 15%; */
+    width: 13%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.header .logo img{
+    width: 100%;
+
+}
+.header .search{
+    width: 70%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    /* padding: 30px; */
+}
+.header .search form{
+    width: 100%;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.header .search form input{
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+.header .search form button{
+    /* background-color: #f94d2f; */
+    background-color: #a61713;
+    float: right;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+.header .search form button:hover{
+    /* background-color: #e94124;    */
+    background-color: #84130f;
+}
+.header .search .topSearchList{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}   
+.header .search .topSearchList a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;    
+    font-weight: 300;
+    margin-right: 10px;
+}
+.header .search .topSearchList a:hover{
+    text-decoration: underline;
+}
+.header .rightHeader{
+    /* width: 15%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header .rightHeader .btnCart, .rightHeader .btnNotification{
+    margin: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    color: white;
+    position: relative;
+}
+.header .rightHeader .btnOpenFormSearch{
+    margin: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    color: white;
+    position: relative;
+    display: none;
+}
+.header .rightHeader .btnOpenFormSearch:hover{
+    background: #0000001c;
+    border-radius: 50%;
+}
+.header .rightHeader .btnCart:hover{
+    background: #0000001c;
+    border-radius: 50%;
+}
+.header .rightHeader .btnNotification:hover{
+    background: #0000001c;
+    border-radius: 50%;
+}
+.header .rightHeader .btnCart .numberOfCart{
+    position: absolute;
+    background-color: #a61713;
+    /* color: #f94d2f; */
+    color: white;
+    padding: 0px 4px;
+    border-radius: 50%;
+    /* border: 1px solid #f94d2f; */
+    border: 1px solid black;
+    transform: translate(-2px, -8px);
+}
+.header .rightHeader .btnNotification .numberOfNotificate{
+    position: absolute;
+    background-color: #a61713;
+    /* color: #f94d2f; */
+    color: white;
+    padding: 0px 4px;
+    border-radius: 50%;
+    /* border: 1px solid #f94d2f; */
+    border: 1px solid black;
+    transform: translate(-2px, -8px);
+}
+.header .rightHeader .btnProfileUser{
+    background: none;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.header .rightHeader .btnProfileUser img{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Hết CSS Header */
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    .news{
+        margin-top: 102px;
+    }
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    /* Header ở điện thoại */
+    .header{
+        /* background: rgb(254,98,50);
+        background: linear-gradient(0deg, rgba(254,98,50,1) 0%, rgba(247,70,46,1) 100%); */
+        background-color: #000000e8;
+        backdrop-filter: blur(10px);
+        /* height: 115px; */
+        margin: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .header .search{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        align-items: start;
+        padding: 0px;
+        position: absolute;
+        top: 89px;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    .header .search form{
+        border-radius: 0px;   
+    }
+    .header .topOfHeaderContainer{
+        width: 100%;
+        padding: 10px 0px;
+        padding-bottom: 0px;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header .bottomOfHeaderContainer{
+        margin: 10px 0px;
+        padding: 0px;
+    }
+    .header .logo{
+        width: 35%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .header .rightHeader{
+        /* width: 15%; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .header .rightHeader .btnOpenFormSearch{
+        margin: 5px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: none;
+        color: white;
+        position: relative;
+        display: block;
+    }
+}

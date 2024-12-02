@@ -1,0 +1,307 @@
+<!-- Phần trang của shop -->
+<div class="row shopInfoPageContainer">
+    <!-- Phần top của Shop Page -->
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 topOfShopInfoPage">
+        <div class="shopInfo" *ngIf="dataUser">
+            <div class="shopAvatar">
+                <div class="shopAvatarDetail">
+                    <img [src]="baseUrl + dataUser.avatar " alt="">
+                    <span class="shopName">{{ dataUser.user_name }}</span>
+                </div>
+                <div class="btnOfShopInfoContainer">
+                    <button><i class="fa-solid fa-plus"></i> THEO DÕI</button>
+                    <button><i class="fa-regular fa-message"></i> CHAT</button>
+                </div>
+            </div>
+            <div class="shopNumeral">
+                <div class="shopNumeralRating">
+                    <span>
+                        <i class="fa-solid fa-star" style="color: #222;"></i> Đánh Giá
+                    </span>
+                    <span style="color: #a61713; font-weight: 400;">
+                        1,2k
+                    </span>
+                </div>
+                <div class="shopNumeralProduct">
+                    <span>
+                        <i class="fa-solid fa-store" style="color: #222;"></i> Sản Phẩm
+                    </span>
+                    <span style="color: #a61713; font-weight: 400;"> 
+                        96
+                    </span>
+                </div>
+                <div class="shopNumeralJoin">
+                    <span>
+                        <i class="fa-solid fa-user-plus" style="color: #222;"></i> Tham Gia
+                    </span>
+                    <span style="color: #a61713; font-weight: 400;">
+                        {{ formatDate(dataUser.createdAt)  }}
+                    </span>
+                </div>
+                <div class="shopNumeralFollowers">
+                    <span>
+                        <i class="fa-solid fa-users" style="color: #222;"></i> Người Theo Dõi
+                    </span>
+                    <span style="color: #a61713; font-weight: 400;">
+                        3,5k
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Shop Menu Bar -->
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 shopMenuNav">
+        <button id="btnHomeID" type="button" class="checked" (click)="handleClickTabShopPage('btnHomeID')">
+            Trang Chính
+        </button>
+        <button id="btnAllProductID" type="button" class="" (click)="handleClickTabShopPage('btnAllProductID');">
+            Sản Phẩm
+        </button>
+        <!-- Bỏ nút danh mục ở trên -->
+        <!-- <button id="btnAllProductID1" type="button" class="" (click)="handleClickTabShopPage('btnAllProductID');">
+            Danh muc
+        </button> -->
+        <!-- <select name="" id="">            
+            <option id="btnAllProductID" value="" *ngFor="let category of listCategory; let i = index" (click)="handleClickTabShopPage('btnAllProductID')">{{ category.category_name }}</option>
+        </select> -->
+    </div>
+    <!-- Phần main của Shop Page -->
+    <div class="col l-10 l-o-1 m-10 m-o-1 c-12 mainOfShopInfoPage">
+        <!-- Slide tin tức banner của shop -->
+        <div class="newsInShopPage">
+            <div id="slideNewsInShopPageID" class="slideNewsInShopPage">
+                <button id="btnLeftSlideNewsID" class="btnLeftSlideNews">
+                    <i class="fa-solid fa-caret-left"></i>
+                </button>
+                <div id="slideNewsImageInShopPageID" class="slideNewsImageInShopPage">
+                    <img src="https://cf.shopee.vn/file/vn-11134258-7r98o-m04765kvchovec_xxhdpi" alt="" style="margin-left: 0px;">
+                    <img src="https://cf.shopee.vn/file/vn-11134258-7r98o-m08aekl0p0bxbb_xxhdpi" alt="">
+                    <img src="https://cf.shopee.vn/file/vn-11134258-7r98o-m0478qxsq6j3d1_xxhdpi" alt="">
+                    <img src="https://cf.shopee.vn/file/vn-11134258-7r98o-m08i96pe504t6d_xxhdpi" alt="">
+                    <img src="https://cf.shopee.vn/file/vn-11134258-7r98o-m047ds0tqdfz69_xxhdpi" alt="">
+                    <img src="https://cf.shopee.vn/file/vn-11134258-7r98o-m047k5mrq5m577_xxhdpi" alt="" style="margin-right: 0px;">
+                </div>
+                <button id="btnRightSlideNewsID" class="btnRightSlideNews">
+                    <i class="fa-solid fa-caret-right"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Phần list sản phẩm gợi ý -->
+        <div class="otherProductOfShopContainer">
+            <div class="topOfOtherProduct">
+                <span class="titleOtherProductOfShop">CÁC SẢN PHẨM ĐƯỢC ĐÁNH GIÁ CAO</span>
+                <div class="rightOfTopOtherProduct">
+                    <a href="#">Xem tất cả</a>
+                    <div class="btnMoveOtherProductContainer">
+                        <button id="btnMoveOtherProductLeftID">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </button>
+                        <button id="btnMoveOtherProductRightID">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row listOtherProductOfShop">
+                <!-- Item -->
+                <div class="col l-2 m-3 c-4 btnOtherProductOfShopContainer">
+                    <button class="btnOtherProductOfShop">
+                        <div class="otherProductOfShopSaleTag">
+                            -50%
+                        </div>
+                        <img src="https://down-vn.img.susercontent.com/file/sg-11134201-22090-m8b81fd6hthva7@resize_w450_nl.webp" alt="">
+                        <span>Combo 3 chai Nước giặt OMO</span>
+                        <div class="otherProductOfShopPriceSale">
+                            <span class="otherProductOfShopPrice">171.000 đ</span>
+                            <span class="otherProductOfShopSold">Đã bán 7,5k</span>
+                        </div>
+                    </button>
+                </div>
+                <!-- Item -->
+                <div class="col l-2 m-3 c-4 btnOtherProductOfShopContainer">
+                    <button class="btnOtherProductOfShop">
+                        <div class="otherProductOfShopSaleTag">
+                            -50%
+                        </div>
+                        <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lvcrh2vd6gel00@resize_w450_nl.webp" alt="">
+                        <span>Combo 3 chai Nước giặt OMO</span>
+                        <div class="otherProductOfShopPriceSale">
+                            <span class="otherProductOfShopPrice">171.000 đ</span>
+                            <span class="otherProductOfShopSold">Đã bán 7,5k</span>
+                        </div>
+                    </button>
+                </div>
+                <!-- Item -->
+                <div class="col l-2 m-3 c-4 btnOtherProductOfShopContainer">
+                    <button class="btnOtherProductOfShop">
+                        <div class="otherProductOfShopSaleTag">
+                            -50%
+                        </div>
+                        <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpje74h6iqt105@resize_w450_nl.webp" alt="">
+                        <span>Combo 3 chai Nước giặt OMO</span>
+                        <div class="otherProductOfShopPriceSale">
+                            <span class="otherProductOfShopPrice">171.000 đ</span>
+                            <span class="otherProductOfShopSold">Đã bán 7,5k</span>
+                        </div>
+                    </button>
+                </div>
+                <!-- Item -->
+                <div class="col l-2 m-3 c-4 btnOtherProductOfShopContainer">
+                    <button class="btnOtherProductOfShop">
+                        <div class="otherProductOfShopSaleTag">
+                            -50%
+                        </div>
+                        <img src="https://down-vn.img.susercontent.com/file/8463cbd5e2468b63f8a83f63c2ebf411@resize_w450_nl.webp" alt="">
+                        <span>Combo 3 chai Nước giặt OMO</span>
+                        <div class="otherProductOfShopPriceSale">
+                            <span class="otherProductOfShopPrice">171.000 đ</span>
+                            <span class="otherProductOfShopSold">Đã bán 7,5k</span>
+                        </div>
+                    </button>
+                </div>
+                <!-- Item -->
+                <div class="col l-2 m-3 c-4 btnOtherProductOfShopContainer">
+                    <button class="btnOtherProductOfShop">
+                        <div class="otherProductOfShopSaleTag">
+                            -50%
+                        </div>
+                        <img src="https://down-vn.img.susercontent.com/file/b8a07c67a7b0bff34e66aa8ace1c0aee@resize_w450_nl.webp" alt="">
+                        <span>Combo 3 chai Nước giặt OMO</span>
+                        <div class="otherProductOfShopPriceSale">
+                            <span class="otherProductOfShopPrice">171.000 đ</span>
+                            <span class="otherProductOfShopSold">Đã bán 7,5k</span>
+                        </div>
+                    </button>
+                </div>
+                <!-- Item -->
+                <div class="col l-2 m-3 c-4 btnOtherProductOfShopContainer">
+                    <button class="btnOtherProductOfShop">
+                        <div class="otherProductOfShopSaleTag">
+                            -50%
+                        </div>
+                        <img src="https://down-vn.img.susercontent.com/file/sg-11134201-22100-ips092ft3pivdb@resize_w450_nl.webp" alt="">
+                        <span>Combo 3 chai Nước giặt OMO</span>
+                        <div class="otherProductOfShopPriceSale">
+                            <span class="otherProductOfShopPrice">171.000 đ</span>
+                            <span class="otherProductOfShopSold">Đã bán 7,5k</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Phần để scroll đến -->
+        <div id="topOfproductListMainID" class="topOfproductListMain">
+
+        </div>
+        <!-- Phần list sản phẩm bán chạy -->
+        <div id="productListMainID" class="productListMain">
+            <div id="leftOfProductListID" class="leftOfProductList">
+                <!-- Nút đóng bộ lọc sản phẩm (trên điện thoại) -->
+                <div class="btnCloseFilterProductList">
+                    <button><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="titleFilterProductList">
+                    <span ><i class="fa-solid fa-filter"></i> DANH MỤC</span>
+                </div>
+                <div class="filterBasePlace">
+                    <div class="filterBasePlaceCheckbox" ><span (click)="productByCondition(1,'','',$event);"> Tất cả sản phẩm</span></div>
+                    <div class="filterBasePlaceCheckbox"  *ngFor="let category of listCategory; let i = index">
+                        <span [id]="category._id" (click)="productByCondition(1,'',category._id,$event);" class="categoryOfProduct">{{ category.category_name }} </span>
+                    </div>  
+                </div>
+            </div>
+            <div class="rightOfProductList">
+                <!-- Nút mở Bộ lọc sản phẩm trên điện thoại -->
+                <div class="btnOpenFilterProductList">
+                    <button><span><i class="fa-solid fa-filter"></i> BỘ LỌC TÌM KIẾM</span></button>
+                </div>
+                <!-- Lọc theo giá -->
+                <div class="filterByPrice">
+                    <span>Sắp xếp theo</span>
+                    <select (change)="productByCondition(page,sortBy.value,category_id,$event)" name="sortBy" id="" #sortBy>
+                        <option value="">Mặc định</option>
+                        <option value="price_asc">Giá tăng dần</option>
+                        <option value="price_desc">Giá giảm dần</option>
+                        <option value="time_desc">Mới nhất</option>
+                        <option value="sales">Lượt mua</option>
+                    </select>
+                </div>
+                <!-- List sản phẩm -->
+                <div class="row listSuggest">
+                    <!-- item -->
+                    <ng-container *ngIf="listProduct else null_product">
+                        <div class="btnSuggestItemContainer" *ngFor="let product of listProduct">
+                            <button type="button" (click)="moveToProduct(product._id,product.product_slug)"class="btnSuggestItem">
+                                <div class="suggestItemSaleTag">
+                                    -50%
+                                </div>
+                                <img [src]="baseUrl + product.product_imgs[0].alt" alt="">
+                                <span class="productName">{{ product.product_name }}</span>
+                                <div class="suggestItemPriceSale">
+                                    <span class="suggestItemPrice">{{product.product_supp_price | number : '1.0-0' }} đ</span>
+                                </div>
+                                <div class="ratingOfProduct">
+                                    <div class="starRatingOfProductBox">
+                                        <span class="fa fa-star" *ngIf="product.product_avg_rating >= 1" style="color: red;"></span>
+                                        <span class="fa fa-star" *ngIf="product.product_avg_rating >= 2" style="color: red;"></span>
+                                        <span class="fa fa-star" *ngIf="product.product_avg_rating >= 3" style="color: red;"></span>
+                                        <span class="fa fa-star" *ngIf="product.product_avg_rating >= 4" style="color: red;"></span>
+                                        <span class="fa fa-star" *ngIf="product.product_avg_rating >= 5" style="color: red;"></span>
+                                    </div>
+                                    <span class="suggestItemSold">Đã bán {{product.product_sold_quantity}}</span>
+                                </div>
+                            </button>
+                        </div>
+                        
+                    </ng-container>
+                    <ng-template #null_product>
+                        <div class="btnSuggestItemContainer">
+                            <button routerLink="/product-detail" class="btnSuggestItem">
+                                <div class="suggestItemSaleTag">
+                                    -50%
+                                </div>
+                                <img [src]="" alt="Nothing">
+                                <span class="productName">Nothing</span>
+                                <div class="suggestItemPriceSale">
+                                    <span class="suggestItemPrice">Nothing</span>
+                                </div>
+                                <div class="ratingOfProduct">
+                                    <div class="starRatingOfProductBox">
+                                        <div class="starRatingOfProduct">
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
+                                        <span style="
+                                            font-weight: 300;
+                                            color: black;
+                                            font-size: 12px;
+                                            padding: 0px;
+                                            margin-left: 5px;
+                                            margin-top: 2px;"
+                                        >
+                                        Nothing
+                                        </span>
+                                    </div>
+                                    <span class="suggestItemSold">Nothing</span>
+                                </div>
+                            </button>
+                        </div>
+                    </ng-template>
+                     
+                </div>
+                <!-- Pagination -->
+                <div id="paginationInShopPageID" class="pagination">
+                    <button class="">&laquo;</button>
+                    <button class="active" (click)="updatePage(1, $event)">1</button>
+                    <button class="" (click)="updatePage(2, $event)">2</button>
+                    <button class="" (click)="updatePage(3, $event)">3</button>
+                    <button class="" (click)="updatePage(4, $event)">4</button>
+                    <button class="" (click)="updatePage(5, $event)">5</button>
+                    <button class="" (click)="updatePage(6, $event)">6</button>
+                    <button class="">&raquo;</button>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+</div>

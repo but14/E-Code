@@ -1,0 +1,115 @@
+<div class="addProductContainer">
+    <!-- Phần tiêu đề -->
+    <div class="title">
+        <span>Thêm sản phẩm</span>
+        <span style="color: #444; font-size: 16px; font-weight: 400;">Nhập đầy đủ các dữ liệu để thêm sản phẩm,...</span>
+    </div>
+    <!-- Form thêm sản phẩm -->
+    <div class="formAddProduct">
+        <form action="" method="post">
+            <div class="inputWrapper">
+                <!-- Tên sản phẩm -->
+                <span>Tên sản phẩm</span>
+                <input type="text" placeholder="Tên sản phẩm" value="" name="product_name" id="" #product_name>
+            </div>
+            <div class="inputWrapper">
+                <!-- Hình sản phẩm -->
+                <div class="inputImageWrapper">
+                    <span style="width: 100%;">Hình sản phẩm</span>
+                    <span style="padding: 3px 0px; color: #555; font-weight: 400; font-size: 12px; width: 100%;">Chọn 5 hình cho sản phẩm</span>
+                </div>
+                <input type="file" placeholder="" value="" name="img_product" id="productImagesID" multiple style="border:none;" autocomplete="off" (change)="handlePreviewProductImages() ; isFileSelected($event)" #img_product>
+            </div>
+            <div class="inputWrapper">
+                <span></span>
+                <!-- Phần coi trước hình sản phẩm -->
+                <div class="imagePreviewBox">
+                    <div class="imagePreview">
+                        <img id="imagePreviewID1" src="" alt=""></div>
+                    <div class="imagePreview">
+                        <img id="imagePreviewID2" src="" alt=""></div>
+                    <div class="imagePreview">
+                        <img id="imagePreviewID3" src="" alt=""></div>
+                    <div class="imagePreview">
+                        <img id="imagePreviewID4" src="" alt=""></div>
+                    <div class="imagePreview">
+                        <img id="imagePreviewID5" src="" alt=""></div>
+                </div>
+            </div>
+            <div class="inputWrapper">
+                <!-- Miêu tả ngắn cho sản phẩm -->
+                <span>Miêu tả ngắn</span>
+                <textarea type="text" placeholder="Miêu tả ngắn" name="product_short_description" id="" #product_short_description></textarea>
+                <!-- <input type="text" placeholder="Miêu tả ngắn" value="" name="" id=""> -->
+            </div>
+            <div class="inputWrapper">
+                <!-- Miêu tả chi tiết cho sản phẩm -->
+                <span>Miêu tả chi tiết</span>
+                <textarea type="text" placeholder="Miêu tả chi tiết" name="product_description" id="" #product_description></textarea>
+                <!-- <input type="text" name="" id="" value="" placeholder="Miêu tả chi tiết"> -->
+            </div>
+            <div class="inputWrapper">
+                <!-- Chi tiết sản phẩm -->
+                <span>Chi tiết</span>
+                <div class="" style="width: 60%; display: flex; align-items: center; justify-content: space-between;">
+                    <input type="text" placeholder="Tên thuộc tính" name="name" id="nameDetailID" value=""  >
+                    <input type="text" placeholder="Giá trị" name="value" id="valueDetailID" value=""  >
+                    <button id="" type="button" class="btnAddDetail" (click)="handleAddDetail() ">Thêm</button>
+                </div>
+            </div>
+            <div class="inputWrapper">
+                <span></span>
+                <!-- Phần coi trước -->
+                <div id="detailPreviewBoxID" class="detailPreviewBox">
+                    <!-- <div id="HãngID" class="detailPreviewBox">
+                        <span style="color: #555; font-weight: 400;">Hãng</span>
+                        <span style="color: black; font-weight: 500;">David Roses</span>
+                        <button id="" type="button" class="btnDeleteDetail">Xóa</button>
+                    </div> -->
+                </div>
+            </div>
+            <div >
+                <span>Loại sản phẩm</span>
+                <select (change)="onCategoryChange($event)" #categoriesID>
+                  <option *ngFor="let category of allCategory" [value]="category._id">{{ category.name }}</option>
+                </select>
+              </div>
+              
+            <div class="inputWrapper">
+                <!-- Giá -->
+                <span>Giá</span>
+                <input type="number" name="product_supp_price" id="" value="" placeholder="Giá" [defaultValue]="" #product_supp_price>
+            </div>
+            <div class="inputWrapper">
+                <!-- Biến thể -->
+                <div class="inputImageWrapper">
+                    <span style="width: 100%;">Biến thể</span>
+                    <span style="padding: 3px 0px; color: #555; font-weight: 400; font-size: 12px; width: 100%;">Bấm thêm để thêm biến thể vừa nhập, có thể thêm nhiều biến thể</span>
+                </div>
+                <div class="variantsBox">
+                    <!-- Phần nhập biến thể -->
+                    <div class="variant" style="padding: 0px;">
+                        <input type="text" placeholder="Tên biến thể" style="width: 20%;" name="variant_name" id="nameVariantID" #variant_name>
+                        <input type="file" name="product_variants_img" id="imageVariantID" style="width: 20%; border:none;"  #product_variants_img>
+                        <input type="number" name="price" id="priceVariantID" value="" placeholder="Giá" style="width: 20%;" #price>
+                        <input type="number" placeholder="Số lượng" name="in_stock" id="quantityVariantID" value="" [defaultValue]="" style="width: 20%;" #in_stock>
+                        <button type="button" class="btnAddVariant" style="width: 20%;" (click)="handlePreviewVariant()">Thêm</button>
+                    </div>
+                </div>
+            </div>
+            <div class="inputWrapper">
+                <span></span>
+                <!-- Phần coi trước -->
+                <div id="previewVariantBoxID" class="variantsBox">
+                    <!-- <div id="100 Red Roses (Small)" class="variant">
+                        <span style="width: 45%;">100 Red Roses (Small)</span>
+                        <img src="https://bouqs.com/cdn-cgi/image/height=454,fit=cover,quality=80,width=454,format=auto/media/W1siZiIsIjIwMjQvMDgvMjMvMTcvNDIvNDUvOTljODZmNTItMGM0MC00MDkwLTgzZDItNTJkYzZjY2RkOTBkL0ZBTEwyNF9ERUxJTEFIX09TXzAyNTNfV2ViLmpwZyJdXQ/FALL24_DELILAH_OS_0253_Web.jpg?sha=1fdacf040343961d" alt="">
+                        <button type="button" class="btnDeleteVariant" style="width: 10%;">Xóa</button>
+                    </div> -->
+                </div>
+            </div>
+            <!-- Lưu -->
+            <button type="button" class="btnSave" (click)="create_product(product_name,product_short_description, product_description,product_supp_price)" >Xác nhận</button>
+        </form>
+    </div>
+</div>

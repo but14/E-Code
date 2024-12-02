@@ -1,0 +1,311 @@
+.orderHistory{
+    padding: 20px;
+    /* display: grid; */
+    padding-left: 40px;
+}
+.orderHistory .titleOrderHistory{
+
+}
+.orderHistory .titleOrderHistory h2{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    color: black;
+    margin: 0;
+}
+.orderHistory .listOrder{
+
+}   
+.orderHistory .listOrder .orderHistoryInfo{
+    border: .5px solid #efefef;
+    padding: 10px;
+    margin: 15px 0px;
+    border-radius: 4px;
+}
+.orderHistory .listOrder .orderHistoryInfo .top{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.orderHistory .listOrder .orderHistoryInfo .top .leftTop{ 
+    display: flex;
+    align-items: center;
+}
+.orderHistory .listOrder .orderHistoryInfo .top .leftTop span{ 
+    font-size: 16px;
+    font-weight: 500;
+}
+.orderHistory .listOrder .orderHistoryInfo .top .leftTop .btnWatchShop{ 
+    background-color: white;
+    padding: 5px 10px;
+    color: #555;
+    border: .5px solid #555555a8;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all .2s;
+    margin-left: 15px;
+}
+.orderHistory .listOrder .orderHistoryInfo .top .leftTop .btnWatchShop:hover{ 
+    background-color: #efefef;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-bottom: .5px solid #efefef;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .info{
+    display: flex;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .info .productName{
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    height: 50%;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .info .productName span{
+    display: block;
+    padding: 3px 0px;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .info .productName span:hover{
+    /* text-decoration: underline; */
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .info img{
+    width: 90px;
+    height: 90px;
+    /* border: .5px solid #efefef; */
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    object-fit: cover;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .price{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.orderHistory .listOrder .orderHistoryInfo .productInfo .price span{
+    font-size: 15px;
+    font-weight: 400;
+    color: #a61713;
+}
+.orderHistory .listOrder .orderHistoryInfo .totalPriceInfo{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px 0px;
+}
+.orderHistory .listOrder .orderHistoryInfo .totalPriceInfo span{
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+}
+.orderHistory .listOrder .orderHistoryInfo .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.orderHistory .listOrder .orderHistoryInfo .bottom .btnRePurchase{
+    border: .5px solid #a61713;
+    background: #a61713;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.orderHistory .listOrder .orderHistoryInfo .bottom .btnRePurchase:hover{
+    background-color: #84130f;
+    transition: all .1s;
+}
+.orderHistory .listOrder .orderHistoryInfo .bottom .btnRating{
+    border: .5px solid #a61713;
+    background-color: white;
+    padding: 10px 25px;
+    color: #a61713;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.orderHistory .listOrder .orderHistoryInfo .bottom .btnRating:hover{
+    background-color: #a61713;
+    color: white;
+    transition: all .1s;
+}
+.timeline {
+    position: relative;
+    margin-left: 20px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: green;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: blue;
+}
+.timeline-item.gray::before {
+    background: gray;
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+.title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.product-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.product-item img {
+    width: 80px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.product-details {
+    flex-grow: 1;
+}
+.product-details p {
+    margin: 0;
+}
+.product-price, .product-quantity, .product-total {
+    width: 100px;
+    text-align: right;
+}
+.product-price {
+    color: #333;
+}
+.product-total {
+    color: #333;
+}
+.insurance {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.insurance input {
+    margin-right: 10px;
+}
+.note {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.shipping-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.shipping-method span {
+    margin-right: 10px;
+}
+.shipping-method a {
+    color: #007bff;
+    text-decoration: none;
+}
+.total-amount {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    .orderHistory{
+        padding: 5px;
+        /* display: grid; */
+        padding-top: 20px;
+    }
+    .orderHistory .listOrder .orderHistoryInfo .productInfo .info{
+        display: flex;
+        width: 85%;
+    }
+    .orderHistory .listOrder .orderHistoryInfo .productInfo .info .productName span{
+        display: block;
+        padding: 3px 0px;
+        font-size: 15px;
+        color: black;
+        font-weight: 500;
+    }
+    .orderHistory .listOrder .orderHistoryInfo .productInfo .price{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 15%;
+        padding-left: 10px;
+    }
+    .orderHistory .listOrder .orderHistoryInfo .productInfo .price span{
+        font-size: 14px;
+        font-weight: 400;
+        color: #a61713;
+    }
+
+    
+    
+    
+}

@@ -1,0 +1,632 @@
+/* Import Font Chữ */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* CSS tổng quát */
+*{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    /* padding: 0;
+    margin: 0; */
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    /* margin: 0px; */
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    /* height: 100%; */
+    background-color: #f5f5f5;
+    position: relative;
+}
+/* Hết CSS tổng quát */
+
+#backHeaderID{
+    width: 100%;
+    height: 85px;
+}
+/* CSS Sign Up */
+.signUpContainer{
+    padding: 100px 0px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://www.hadleypark.co.uk/media/2012/12/David-Austin-Roses-1000x450.jpg');
+    /* background-image: url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700326354.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.signUpContainer .signUp{
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    background-color: #fffc;
+    border-radius: 10px;
+    box-shadow: 0 54px 55px #00000040, 0 -12px 30px #0000001f, 0 4px 6px #0000001f, 0 12px 13px #0000002b, 0 -3px 5px #00000017;
+    display: grid;
+    justify-content: flex-start;
+    margin: 20px;
+    max-width: 420px;
+    padding: 25px 70px;
+}
+.signUpContainer .signUp form{
+   
+}
+.signUpContainer .signUp form input{
+    padding: 15px;
+    border: .5px solid #efefef;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    margin: 10px 0px;
+    width: 100%;
+}
+.signUpContainer .signUp form .titleSignUp{
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.signUpContainer .signUp form .titleSignUp span{ 
+    font-size: 24px;
+    font-weight: 600;
+}
+.signUpContainer .signUp form .emailBox{
+    width: 100%;
+    text-align: center;
+}
+.signUpContainer .signUp form .passwordBox{
+    width: 100%;
+    text-align: center;
+}
+.signUpContainer .signUp form .signUpBtnBox{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+}
+.signUpContainer .signUp form .genderBox{
+    width: 100%;
+    text-align: center;
+}
+.signUpContainer .signUp form .genderBox{
+    
+    width: 100%;
+    text-align: center;
+}
+.signUpContainer .signUp form .genderBox select{
+    padding: 15px;
+    border: .5px solid #efefef;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    margin: 10px 0px;
+    width: 100%;
+    color: black;
+}
+.signUpContainer .signUp form .signUpBtnBox button{
+    border: .5px solid #a61713;
+    background: #a61713;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0;
+}
+.signUpContainer .signUp form .signUpBtnBox button:hover{
+    background-color: #84130f;
+}
+.signUpContainer .signUp .toSignUp{
+    padding-top: 20px;
+}
+.signUpContainer .signUp .toSignUp span{
+    color: #333;
+    font-weight: 300;
+}
+.signUpContainer .signUp .toSignUp a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+.signUpContainer .signUp .toSignUp a:hover{
+    text-decoration: underline;
+    color: #84130f;
+}
+/* Hết CSS Sign Up */
+
+/* CSS Header */
+.header{
+    /* background: rgb(254,98,50);
+    background: linear-gradient(0deg, rgba(254,98,50,1) 0%, rgba(247,70,46,1) 100%); */
+    background-color: #000000e8;
+    backdrop-filter: blur(10px);
+    /* height: 115px; */
+    margin: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header .col{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.header .topOfHeaderContainer{
+    width: 100%;
+    padding: 10px 0px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .topOfHeaderContainer .left{
+    
+}
+.header .topOfHeaderContainer .left a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0px 10px;
+    border-right: .5px solid #555;
+    transition: all .2s;
+}
+.header .topOfHeaderContainer .left a:hover{
+    color: #a61713;
+}
+.header .topOfHeaderContainer .right{
+    
+}
+.header .topOfHeaderContainer .right a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0px 10px;
+    /* border-right: .5px solid #555; */
+    transition: all .2s;    
+}
+.header .topOfHeaderContainer .right a:hover{
+    color: #a61713;
+}
+.header .bottomOfHeaderContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.header .logo{
+    /* width: 15%; */
+    width: 13%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.header .logo img{
+    width: 100%;
+
+}
+.header .search{
+    width: 70%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    /* padding: 30px; */
+}
+.header .search form{
+    width: 100%;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.header .search form input{
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+.header .search form button{
+    /* background-color: #f94d2f; */
+    background-color: #a61713;
+    float: right;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+.header .search form button:hover{
+    /* background-color: #e94124;    */
+    background-color: #84130f;
+}
+.header .search .topSearchList{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}   
+.header .search .topSearchList a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;    
+    font-weight: 300;
+    margin-right: 10px;
+}
+.header .search .topSearchList a:hover{
+    text-decoration: underline;
+}
+.header .rightHeader{
+    /* width: 15%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header .rightHeader .btnCart, .rightHeader .btnNotification{
+    margin: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    color: white;
+    position: relative;
+}
+.header .rightHeader .btnOpenFormSearch{
+    margin: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    color: white;
+    position: relative;
+    display: none;
+}
+.header .rightHeader .btnOpenFormSearch:hover{
+    background: #0000001c;
+    border-radius: 50%;
+}
+.header .rightHeader .btnCart:hover{
+    background: #0000001c;
+    border-radius: 50%;
+}
+.header .rightHeader .btnNotification:hover{
+    background: #0000001c;
+    border-radius: 50%;
+}
+.header .rightHeader .btnCart .numberOfCart{
+    position: absolute;
+    background-color: #a61713;
+    /* color: #f94d2f; */
+    color: white;
+    padding: 0px 4px;
+    border-radius: 50%;
+    /* border: 1px solid #f94d2f; */
+    border: 1px solid black;
+    transform: translate(-2px, -8px);
+}
+.header .rightHeader .btnNotification .numberOfNotificate{
+    position: absolute;
+    background-color: #a61713;
+    /* color: #f94d2f; */
+    color: white;
+    padding: 0px 4px;
+    border-radius: 50%;
+    /* border: 1px solid #f94d2f; */
+    border: 1px solid black;
+    transform: translate(-2px, -8px);
+}
+.header .rightHeader .btnProfileUser{
+    background: none;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.header .rightHeader .btnProfileUser img{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Hết CSS Header */
+
+/* CSS Footer */
+.footer{
+    margin: 0;
+    /* margin-top: 30px; */
+    background-color: #ffffff;
+    border-top: 5px solid #a61713;;
+}
+.footer .col{
+    /* border-radius: 4px; */
+    padding: 0;
+}
+.footer .topFooter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 10px;
+    border-bottom: .5px solid #0000001c;
+    padding-bottom: 30px;
+}
+.footer .customerCareContainer{
+    display: grid;
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .customerCareContainer span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer .customerCareContainer a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    margin: 5px 0px;
+}
+.footer .customerCareContainer a:hover{
+    color: #a61713;;
+}
+.footer .aboutShopee{
+    display: grid;
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .aboutShopee span{
+    font-size: 13px;
+    font-weight: 600;
+}
+.footer .aboutShopee a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+}
+.footer .aboutShopee a:hover{
+    color: #a61713;
+}
+.footer .payAndShippingInfo{
+    /* display: grid; */
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .payAndShippingInfo span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+}
+.footer .payAndShippingInfo a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    
+}
+.footer .payAndShippingInfo a:hover{
+    color: #a61713;
+}
+.footer .payInfo{
+    
+}
+.footer .payInfo .payInfoImages{
+    margin: 0;
+}
+.footer .payInfo .payInfoImages img{
+    width: 25%;
+    height: 35px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0px 2px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.footer .shippingInfo{
+    
+}
+.footer .shippingInfo span{
+    margin: 15px 0px;
+    display: block;
+}
+.footer .shippingInfo .shippingInfoImages{
+    margin: 0;
+}
+.footer .shippingInfo .shippingInfoImages img{
+    width: 25%;
+    height: 35px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0px 2px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.footer .otherPlatform{
+    /* display: grid; */
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .otherPlatform .otherPlatformLink{
+    display: grid;
+}
+.footer .otherPlatform span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+.footer .otherPlatform a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    margin: 5px 0px;
+}
+.footer .otherPlatform a:hover{
+    /* color: orangered; */
+    color: #a61713;
+}
+.footer .downloadAppShopee{
+    /* display: grid;    */
+    width: 20%;
+    padding: 0px 5px;
+}
+.footer .downloadAppShopee span{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+.footer .downloadAppShopee a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: dimgray;
+    
+}
+.footer .downloadAppShopee .linkDownload{
+    display: grid;
+    justify-content: left;
+    align-items: center;
+}
+.footer .downloadAppShopee img{
+    width: 100%;
+    height: 35px;
+    padding: 3px;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.footer .downloadAppShopee a:hover{
+    color: #a61713;
+}
+.footer .midFooter{
+    text-align: center;
+    padding: 20px;
+}   
+.footer .midFooter span{
+    font-size: 15px;
+    color: dimgray;
+    font-weight: 300;
+}
+/* Hết CSS Footer */
+
+/*                           MEDIA QUERY                          */
+/***** 1. Thiết bị có kích thước màn hình 740px - 1023px (màn hình tablet và laptop nhỏ) *****/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+/***** 2. Thiết bị có kích thước màn hình 1024px - 1239px (màn của PC or Laptop) *****/
+@media (min-width: 1024px) and (max-width: 1239px) {
+    
+}
+/***** 3. Thiết bị có kích thước màn hình >= 740px (màn từ Tablet trở lên) *****/
+@media (min-width: 740px) {
+
+}
+/***** 4. Thiết bị có kích thước màn hình >= 1113px (PC or Laptop có màn lớn) *****/
+@media (min-width: 1113px){
+    
+}
+/***** 5. Thiết bị có kích thước màn hình <= 600px (Điện thoại) *****/
+@media (max-width: 600px){
+    #backHeaderID{
+        width: 100%;
+        height: 58px;
+    }
+    /* Header */
+    /* Header ở điện thoại */
+    .header .search{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        align-items: start;
+        padding: 0px;
+        position: absolute;
+        top: 89px;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    .header .search form{
+        border-radius: 0px;   
+    }
+    .header .topOfHeaderContainer{
+        width: 100%;
+        padding: 10px 0px;
+        padding-bottom: 0px;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header .bottomOfHeaderContainer{
+        margin: 10px 0px;
+        padding: 0px;
+    }
+    .header .logo{
+        width: 35%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .header .rightHeader{
+        /* width: 15%; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .header .rightHeader .btnOpenFormSearch{
+        margin: 5px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: none;
+        color: white;
+        position: relative;
+        display: block;
+    }
+    /* Hết header */
+    /* Footer */
+    /* .footer{
+        margin: 0;
+        margin-top: 30px;
+        background-color: #ffffff;
+        border-top: 5px solid #a61713;
+        display: none;
+    } */
+}

@@ -1,0 +1,179 @@
+<div class="orderHistory">
+    <div class="titleOrderHistory">
+      <h2>Lịch sử đơn hàng</h2>
+    </div>
+    <div class="listOrder">
+      <!-- Item -->
+      <ng-container *ngIf="list_order.length > 0; else elseBlock">
+        <div class="orderHistoryInfo" *ngFor="let order of list_order">
+          <div class="top">
+            <div class="leftTop">
+              <span> Mã Đơn Hàng :</span>
+              <span>{{order._id}} Trạng thái hiện tại : {{order.order_status}}</span>
+            </div>
+          </div>
+          <div class="top"><b>Theo dõi đơn hàng :</b></div>
+          <div class="timeline" *ngIf="order.order_status == 'Ordered' ">
+            <div class="timeline-item" >
+                Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+            </div>
+            <div class="timeline-item gray" >
+                Đơn hàng đã được chuyển đi 
+            </div>
+            <div class="timeline-item gray">
+                Đơn hàng đang được giao và chờ đánh giá 
+            </div>
+            <div class="timeline-item gray">
+                Thành công <i></i>
+            </div>
+          </div>
+          <div class="timeline" *ngIf="order.order_status == 'Shipping' ">
+            <div class="timeline-item" >
+                Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+            </div>
+            <div class="timeline-item" >
+                Đơn hàng đã được chuyển đi 
+            </div>
+            <div class="timeline-item gray">
+                Đơn hàng đang được giao và chờ đánh giá 
+            </div>
+            <div class="timeline-item gray">
+                Thành công <i></i>
+            </div>
+          </div>
+          <div class="timeline" *ngIf="order.order_status == 'Processing' ">
+            <div class="timeline-item" >
+                Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+            </div>
+            <div class="timeline-item" >
+                Đơn hàng đã được chuyển đi 
+            </div>
+            <div class="timeline-item">
+                Đơn hàng đang được giao và chờ đánh giá 
+            </div>
+            <div class="timeline-item gray">
+                Thành công <i></i>
+            </div>
+          </div>
+          <div class="timeline" *ngIf="order.order_status == 'Successfull' ">
+            <div class="timeline-item" >
+                Đặt hàng thành công <i>(Cập nhập: {{format_date(order.createdAt)}})</i>
+            </div>
+            <div class="timeline-item" >
+                Đơn hàng đã được chuyển đi 
+            </div>
+            <div class="timeline-item">
+                Đơn hàng đang được giao và chờ đánh giá 
+            </div>
+            <div class="timeline-item">
+                Thành công <i></i>
+            </div>
+          </div>
+          
+          <!-- Từng order trong đơn mua -->
+          <!-- <div class="productInfo" *ngFor="let detail of order.order_details">
+            <div class="price">
+              <a routerLink="/product-detail/{{detail.product_id}}" [queryParams]="{ idProduct : detail.product_id }">Name : {{productDetails[detail.product_id].product_name}}</a>
+            </div>
+            <div class="price">
+              <span>Phân loại : {{productDetails[detail.product_id].product_variants[0].variant_name}}</span>
+            </div>
+            <div class="img">
+              <img [src]="productDetails[detail.product_id].product_variants[0].variant_imgs[0].alt" alt="">
+            </div>
+            <div class="price">
+              <span>Số lượng : {{detail.quantity}}</span>
+            </div>
+            <div class="price">
+              <span>{{detail.unit_price | number : '1.0-0'}} đ</span>
+            </div>
+            <div class="price">
+              <button type="button" class="btnRating" (click)="open_review(detail.product_id,detail.variant_id,order._id,order.order_details.length)">Đánh Giá</button>
+            </div>
+          </div> -->
+
+          <div class="container">
+            <div class="product-header"> Danh Sách sản phẩm</div>
+            <ng-container *ngFor="let detail of order.order_details">
+                <div class="product-item">
+                    <img routerLink="/product-detail/{{detail.product_id}}"
+                    [queryParams]="{ idProduct : detail.product_id }"   height="60" [src]="productDetails[detail.product_id].product_variants[0].variant_imgs[0].alt" width="60"/>
+                    <div class="product-details">
+                        <p><b>{{productDetails[detail.product_id].product_name}}</b></p>
+                        <p>Loại: {{productDetails[detail.product_id].product_variants[0].variant_name}} </p>
+                    </div>
+                    <div class="product-price">
+                        ₫ {{detail.unit_price | number : '1.0-0'}}
+                    </div>
+                    <div class="product-quantity">
+                        Số lượng : {{detail.quantity }}
+                    </div>
+                    <div class="product-total">
+                      ₫ {{detail.unit_price * detail.quantity | number : '1.0-0'}}
+                    </div>
+                </div>
+                <div class="price" *ngIf="order.order_status == 'Processing'">
+                  <button type="button" class="btnRating" (click)="open_review(detail.product_id,detail.variant_id,order._id,order.order_details.length)">Đánh Giá</button>
+                </div>
+            </ng-container>
+            <div class="total-amount" style="color: #a61713; font-size: 22px; font-weight: 400;">
+             Tổng số tiền ({{order.order_details.length}} sản phẩm):  {{ order.order_payment_cost | number : '1.0-0'}} đ
+            </div>
+          </div>
+
+          <div class="totalPriceInfo">
+            <span>Thành tiền: <span style="color: #a61713; font-size: 22px; font-weight: 400;">{{ order.order_payment_cost | number : '1.0-0'}} đ</span></span>
+          </div>
+          <div class="bottom">
+            <button class="btnRePurchase" disabled>Mua Lại</button>
+          </div>
+          <!-- Review Container -->
+            <div class="reviewContainer" *ngIf="review_boolean == true && current_review_id == order._id ">
+              <div class="review">
+                <div class="top">
+                  <span>Đánh Giá Sản Phẩm</span>
+                  <button class="btnCloseReview" (click)="close_review()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="middle">
+                  <!-- Nội dung đánh giá -->
+                  <div class="content">
+                    <textarea id="reviewContextID"  placeholder="Nội dung đánh giá..."></textarea>
+                  </div>
+                  <!-- Hình ảnh -->
+                  <div class="chooseImages">
+                    <input id="imagesRatingID" type="file" multiple (change)="onChangeImage($event)">
+                    <div id="listImagesChoosedID" class="listImagesChoosed">
+                      <!-- Nơi hiện thị hình ảnh đã chọn -->
+                    </div>
+                  </div>
+                  <!-- Đánh giá sao -->
+                  <div class="starRatingOfProduct">
+                    <!-- <input id="starRatingOfProductID" type="text" hidden>
+                    <span class="fa fa-star" data-value="1"></span>
+                    <span class="fa fa-star" data-value="2"></span>
+                    <span class="fa fa-star" data-value="3"></span>
+                    <span class="fa fa-star" data-value="4"></span>
+                    <span class="fa fa-star" data-value="5"></span> -->
+                    <input id="starRatingOfProductID" type="text" >
+  
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button type="button" name="" id="" (click)="one_review()">Xác Nhận</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </ng-container>
+      <ng-template #elseBlock>
+        <div class="" style="text-align: center;">
+          <img src="https://cdn.dribbble.com/users/357929/screenshots/2276751/orderup-emptystate-sadbag_1x.png" />
+          <span style="display: block; text-align: center;">Chưa có đơn hàng nào mới...</span>
+        </div>
+        <!-- <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+          <i class="fa-solid fa-spinner newFeedsLoad"></i>
+        </div> -->
+      </ng-template>
+    </div>
+  </div>
+  
