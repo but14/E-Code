@@ -14,10 +14,10 @@
   - Thành viên 3: [Ma Thị Hồng Phúc, 2254810074]
   - Thành viên 4: [Đặng Võ Tùng Dương, 2254810311]
 
-## Thông tin khoa và học viện
+## Thông tin khoa
 
 - **Khoa**: Khoa Công nghệ Thông tin
-- **Học viện**: Học viện hàng không Việt Nam
+
 
 ## Nội dung đề tài
 
