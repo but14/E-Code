@@ -1,4 +1,4 @@
-# Đề tài: [XÂY DỰNG HỆ THỐNG THƯƠNG MẠI ĐIỆN TỬ BÁN ĐỒ THỂ THAO SỬ DỤNG NODEJS,ANGULAR, FLUTTER VÀ MONGODB]
+# Đề tài: [XÂY DỰNG HỆ THỐNG ĐỀ XUẤT CHO THƯƠNG MẠI ĐIỆN TỬ BÁN ĐỒ THỂ THAO SỬ DỤNG NODEJS,ANGULAR, FLUTTER VÀ MONGODB]
 
 ## Thông tin sinh viên
 
@@ -19,6 +19,27 @@
 - **Khoa**: Khoa Công nghệ Thông tin
 - **Học viện**: Học viện hàng không Việt Nam
 
-## Hashtag
+## Nội dung đề tài
 
-#FITVAA
+- **Nền tảng Website**:
+  - Thiết kế giao diện trên website sử dụng Angular18
+  - Xây dựng REST API, chức năng bằng ExpressJS, NodeJS
+  - Sử dụng cơ sở dữ liệu NoSQL: MongoDB
+
+### Hình ảnh minh họa
+
+    ![Giao diện hệ thống](./image1.png)
+    ![Giao diện đề xuất sản phẩm](./image3.png)
+
+- **Nền tảng Mobile**:
+  - Thiết kế giao diện trên mobile sử dụng Flutter
+  - Xây dựng REST API, chức năng bằng ExpressJS, NodeJS
+  - Sử dụng cơ sở dữ liệu NoSQL: MongoDB
+
+### Hình ảnh minh họa
+
+    ![Giao diện hệ thống](./image2.png)
+
+- **Hệ thống đề xuất**:
+  - Sử dụng phương pháp matrix factorization collaborative filtering để đề xuất sản phẩm dựa theo số điểm đánh giá của người dùng trong cơ sở dữ liệu của hệ thống
+    ![Giao diện đề xuất sản phẩm](./image3.png)
