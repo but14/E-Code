@@ -28,7 +28,7 @@
 
 ### Hình ảnh minh họa
 
-![Giao diện hệ thống](./image1.png)
+![Giao diện hệ thống](./image2.png)
 ![Giao diện đề xuất sản phẩm](./image3.png)
 
 - **Nền tảng Mobile**:
@@ -38,7 +38,7 @@
 
 ### Hình ảnh minh họa
 
-![Giao diện hệ thống](./image2.png)
+![Giao diện hệ thống](./image1.png)
 
 - **Hệ thống đề xuất**:
   - Sử dụng phương pháp matrix factorization collaborative filtering để đề xuất sản phẩm dựa theo số điểm đánh giá của người dùng trong cơ sở dữ liệu của hệ thống
